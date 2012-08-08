@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  common_name: MyString
+  scientific_name: MyString
+  chinese_name: MyString
+  tibetan_name: MyString
+  size: MyString
+  summer: false
+  fall: false
+  winter: false
+  spring: false
+  english_description: MyText
+  chinese_description: MyText
+  chapter: 1
+
+two:
+  common_name: MyString
+  scientific_name: MyString
+  chinese_name: MyString
+  tibetan_name: MyString
+  size: MyString
+  summer: false
+  fall: false
+  winter: false
+  spring: false
+  english_description: MyText
+  chinese_description: MyText
+  chapter: 1

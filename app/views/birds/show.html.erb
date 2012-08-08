@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Common name:</b>
+  <%= @bird.common_name %>
+</p>
+
+<p>
+  <b>Scientific name:</b>
+  <%= @bird.scientific_name %>
+</p>
+
+<p>
+  <b>Chinese name:</b>
+  <%= @bird.chinese_name %>
+</p>
+
+<p>
+  <b>Tibetan name:</b>
+  <%= @bird.tibetan_name %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @bird.size %>
+</p>
+
+<p>
+  <b>Summer:</b>
+  <%= @bird.summer %>
+</p>
+
+<p>
+  <b>Fall:</b>
+  <%= @bird.fall %>
+</p>
+
+<p>
+  <b>Winter:</b>
+  <%= @bird.winter %>
+</p>
+
+<p>
+  <b>Spring:</b>
+  <%= @bird.spring %>
+</p>
+
+<p>
+  <b>English description:</b>
+  <%= @bird.english_description %>
+</p>
+
+<p>
+  <b>Chinese description:</b>
+  <%= @bird.chinese_description %>
+</p>
+
+<p>
+  <b>Chapter:</b>
+  <%= @bird.chapter %>
+</p>
+
+
+<%= link_to 'Edit', edit_bird_path(@bird) %> |
+<%= link_to 'Back', birds_path %>

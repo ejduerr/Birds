@@ -1,0 +1,45 @@
+<h1>Listing birds</h1>
+
+<table>
+  <tr>
+    <th>Common name</th>
+    <th>Scientific name</th>
+    <th>Chinese name</th>
+    <th>Tibetan name</th>
+    <th>Size</th>
+    <th>Summer</th>
+    <th>Fall</th>
+    <th>Winter</th>
+    <th>Spring</th>
+    <th>English description</th>
+    <th>Chinese description</th>
+    <th>Chapter</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @birds.each do |bird| %>
+  <tr>
+    <td><%= bird.common_name %></td>
+    <td><%= bird.scientific_name %></td>
+    <td><%= bird.chinese_name %></td>
+    <td><%= bird.tibetan_name %></td>
+    <td><%= bird.size %></td>
+    <td><%= bird.summer %></td>
+    <td><%= bird.fall %></td>
+    <td><%= bird.winter %></td>
+    <td><%= bird.spring %></td>
+    <td><%= bird.english_description %></td>
+    <td><%= bird.chinese_description %></td>
+    <td><%= bird.chapter %></td>
+    <td><%= link_to 'Show', bird %></td>
+    <td><%= link_to 'Edit', edit_bird_path(bird) %></td>
+    <td><%= link_to 'Destroy', bird, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bird', new_bird_path %>
