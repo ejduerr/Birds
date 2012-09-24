@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120808213656) do
+ActiveRecord::Schema.define(:version => 20120920211829) do
 
   create_table "birds", :force => true do |t|
     t.string   "common_name"
@@ -26,8 +26,24 @@ ActiveRecord::Schema.define(:version => 20120808213656) do
     t.text     "english_description"
     t.text     "chinese_description"
     t.integer  "chapter"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.string   "primary_image_file_name"
+    t.string   "primary_image_content_type"
+    t.integer  "primary_image_file_size"
+    t.datetime "primary_image_updated_at"
+    t.string   "secondary_image_file_name"
+    t.string   "secondary_image_content_type"
+    t.integer  "secondary_image_file_size"
+    t.datetime "secondary_image_updated_at"
+    t.string   "range_map_file_name"
+    t.string   "range_map_content_type"
+    t.integer  "range_map_file_size"
+    t.datetime "range_map_updated_at"
+    t.string   "song_file_name"
+    t.string   "song_content_type"
+    t.integer  "song_file_size"
+    t.datetime "song_updated_at"
   end
 
 end

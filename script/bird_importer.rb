@@ -6,11 +6,12 @@ CSV.foreach file_path do |row|
 	bird.common_name = row[0]
 	bird.chinese_name = row[1]
 	bird.scientific_name = row[2]
-	bird.set_seasons row[3]
-	bird.size = row[4]
-	bird.chapter = row[5]
-	bird.english_description = row[6]
-	bird.chinese_description = row[7]
+	bird.tibetan_name = row[3]
+	bird.set_seasons(row[4])
+	bird.size = row[5]
+	bird.chapter = row[6]
+	bird.english_description = row[7]
+	bird.chinese_description = row[8]
 	bird.save validate: false
 end
 	
