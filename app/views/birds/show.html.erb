@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <%= image_tag @bird.primary_image.url(:main) %>
-<%= image_tag @bird.secondary_image.url %>
+<%= image_tag @bird.secondary_image.url(:main) %>
 <%= image_tag @bird.range_map.url(:main) %>
 <%= link_to "song", @bird.song.url %>
 
