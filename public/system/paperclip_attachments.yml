@@ -2,6 +2,7 @@
 :Bird:
   :primary_image:
   - :main
+  - :thumb
   :secondary_image:
   - :main
   :range_map:

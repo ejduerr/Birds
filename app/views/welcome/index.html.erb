@@ -1,0 +1,34 @@
+		<div class="container_12">
+		  <div class="grid_12">insert banner photo here</div>
+		  
+		  <div class="clear"></div>
+		  
+		  <div class="grid_12">insert search finder here</div>
+		  <div class="clear"></div>
+		  
+		  <% birds = Bird.all.shuffle %>
+		  
+		  <div class="grid_2"><%= image_tag birds[0].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[1].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[2].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[3].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[4].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[5].primary_image.url(:thumb) %></div>
+		  <div class="clear"></div>
+
+		  <div class="grid_2"><%= image_tag birds[6].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[7].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[8].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[9].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[10].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[11].primary_image.url(:thumb) %></div>
+		  <div class="clear"></div>
+		  
+		  <div class="grid_2"><%= image_tag birds[12].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[13].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[14].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[15].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[16].primary_image.url(:thumb) %></div>
+		  <div class="grid_2"><%= image_tag birds[17].primary_image.url(:thumb) %></div>
+		  <div class="clear"></div>
+		</div>
