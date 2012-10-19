@@ -2,7 +2,7 @@ class Bird < ActiveRecord::Base
 		
 		has_attached_file :primary_image, :styles => { :main => ["375x563#", :png], :thumb => ["140x210#", :png]}
 				
-		has_attached_file :secondary_image, :styles => { :main => ["563x375#", :png] }
+		has_attached_file :secondary_image, :styles => { :main => ["200x200", :png] }
 		
 		has_attached_file :range_map, :styles => { :main => ["282x221#", :png] }
 		

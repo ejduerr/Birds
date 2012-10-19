@@ -1,70 +1,77 @@
-<p id="notice"><%= notice %></p>
+<div class="container_12">
+	<p id="notice"><%= notice %></p>
 
-<%= image_tag @bird.primary_image.url(:main) %>
-<%= image_tag @bird.secondary_image.url(:main) %>
-<%= image_tag @bird.range_map.url(:main) %>
-<%= link_to "song", @bird.song.url %>
+	<div class="grid_6">
+		<p>
+		  <b>Common name:</b>
+		  <%= @bird.common_name %>
+		</p>
 
-<p>
-  <b>Common name:</b>
-  <%= @bird.common_name %>
-</p>
+		<p>
+		  <b>Scientific name:</b>
+		  <%= @bird.scientific_name %>
+		</p>
 
-<p>
-  <b>Scientific name:</b>
-  <%= @bird.scientific_name %>
-</p>
+		<p>
+		  <b>Chinese name:</b>
+		  <%= @bird.chinese_name %>
+		</p>
 
-<p>
-  <b>Chinese name:</b>
-  <%= @bird.chinese_name %>
-</p>
+		<p>
+		  <b>Tibetan name:</b>
+		  <%= @bird.tibetan_name %>
+		</p>
 
-<p>
-  <b>Tibetan name:</b>
-  <%= @bird.tibetan_name %>
-</p>
+		<p>
+		  <%= image_tag @bird.primary_image.url(:main) %> 
+		</p>
+		
+		<p>
+		  <audio src="<%= @bird.song.url %>" controls></audio>
+		</p>
+	 </div>
 
-<p>
-  <b>Size:</b>
-  <%= @bird.size %>
-</p>
+	<div class="grid_6">
+		<p>
+		  <%= image_tag @bird.secondary_image.url(:main), style: 'float: right; margin: 5px;' %>
+		  <%= @bird.english_description %>
+		</p>
 
-<p>
-  <b>Summer:</b>
-  <%= @bird.summer %>
-</p>
+		<p>
+		  <%= @bird.chinese_description %>
+		</p>
+		<p>
+		  <b>Size:</b> 
+		  <%= @bird.size %> cm
+		</p>
 
-<p>
-  <b>Fall:</b>
-  <%= @bird.fall %>
-</p>
+		<p>
+	
+		  <% if @bird.summer %>
+		  <%= image_tag "summer.png" %>
+		  <% end %>
+		
+		  <% if @bird.fall %>
+		  <%= image_tag "fall.png" %>
+		  <% end %>
 
-<p>
-  <b>Winter:</b>
-  <%= @bird.winter %>
-</p>
+		  <% if @bird.winter %>
+		  <%= image_tag "winter.png" %>
+		  <% end %>
+	
+		  <% if @bird.spring %>
+		  <%= image_tag "spring.png" %>
+		  <% end %>
+		</p>
 
-<p>
-  <b>Spring:</b>
-  <%= @bird.spring %>
-</p>
+		<%= image_tag @bird.range_map.url(:main) %>
+		<p>
+		  <b>Chapter:</b>
+		  <%= @bird.chapter %>
+		</p>
 
-<p>
-  <b>English description:</b>
-  <%= @bird.english_description %>
-</p>
+	</div>
 
-<p>
-  <b>Chinese description:</b>
-  <%= @bird.chinese_description %>
-</p>
-
-<p>
-  <b>Chapter:</b>
-  <%= @bird.chapter %>
-</p>
-
-
-<%= link_to 'Edit', edit_bird_path(@bird) %> |
-<%= link_to 'Back', birds_path %>
+	<%= link_to 'Edit', edit_bird_path(@bird) %> |
+	<%= link_to 'Back', birds_path %>
+</div>
