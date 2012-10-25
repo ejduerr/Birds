@@ -1,6 +1,7 @@
 class Bird < ActiveRecord::Base
+		belongs_to :chapter
 		
-		has_attached_file :primary_image, :styles => { :main => ["375x563#", :png], :thumb => ["140x210#", :png]}
+		has_attached_file :primary_image, :styles => { :main => ["375x563#", :png], :thumb => ["140x210#", :png], :tiny => ["96x96#", :png]}
 				
 		has_attached_file :secondary_image, :styles => { :main => ["200x200", :png] }
 		
@@ -24,5 +25,8 @@ class Bird < ActiveRecord::Base
 				self.winter = true		
 			end			
 		end
-
+		
+		def name
+			common_name
+		end
 end

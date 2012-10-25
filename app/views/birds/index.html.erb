@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Image</th>
     <th>Common name</th>
     <th>Scientific name</th>
     <th>Chinese name</th>
@@ -13,7 +14,6 @@
     <th>Spring</th>
     <th>English description</th>
     <th>Chinese description</th>
-    <th>Chapter</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,6 +21,7 @@
 
 <% @birds.each do |bird| %>
   <tr>
+    <td><%= image_tag bird.primary_image.url(:tiny) %></td>
     <td><%= bird.common_name %></td>
     <td><%= bird.scientific_name %></td>
     <td><%= bird.chinese_name %></td>
@@ -32,7 +33,6 @@
     <td><%= bird.spring %></td>
     <td><%= bird.english_description %></td>
     <td><%= bird.chinese_description %></td>
-    <td><%= bird.chapter %></td>
     <td><%= link_to 'Show', bird %></td>
     <td><%= link_to 'Edit', edit_bird_path(bird) %></td>
     <td><%= link_to 'Destroy', bird, confirm: 'Are you sure?', method: :delete %></td>

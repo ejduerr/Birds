@@ -3,6 +3,7 @@
   :primary_image:
   - :main
   - :thumb
+  - :tiny
   :secondary_image:
   - :main
   :range_map:

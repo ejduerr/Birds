@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @chapter.name %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @chapter.number %>
+</p>
+
+<p>
+  <b>English story:</b>
+  <%= @chapter.english_story %>
+</p>
+
+<p>
+  <b>Chinese story:</b>
+  <%= @chapter.chinese_story %>
+</p>
+
+<p>
+  <b>Tibetan story:</b>
+  <%= @chapter.tibetan_story %>
+</p>
+
+<p>
+  <b>English description:</b>
+  <%= @chapter.english_description %>
+</p>
+
+<p>
+  <b>Chinese description:</b>
+  <%= @chapter.chinese_description %>
+</p>
+
+<p>
+  <b>Birds</b>
+  <ul>
+  <% @chapter.birds.each do |bird| %>
+    <li><%= link_to bird.common_name, bird %></li>
+  <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Edit', edit_chapter_path(@chapter) %> |
+<%= link_to 'Back', chapters_path %>

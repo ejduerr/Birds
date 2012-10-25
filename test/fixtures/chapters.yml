@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyText
+  number: 1
+  english_story: MyText
+  chinese_story: MyText
+  tibetan_story: MyText
+  english_description: MyText
+  chinese_description: MyText
+
+two:
+  name: MyText
+  number: 1
+  english_story: MyText
+  chinese_story: MyText
+  tibetan_story: MyText
+  english_description: MyText
+  chinese_description: MyText

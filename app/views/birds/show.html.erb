@@ -67,7 +67,7 @@
 		<%= image_tag @bird.range_map.url(:main) %>
 		<p>
 		  <b>Chapter:</b>
-		  <%= @bird.chapter %>
+		  <%= link_to @bird.chapter.name, @bird.chapter %>
 		</p>
 
 	</div>

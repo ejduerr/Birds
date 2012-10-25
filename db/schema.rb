@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120920211829) do
+ActiveRecord::Schema.define(:version => 20121025162503) do
 
   create_table "birds", :force => true do |t|
     t.string   "common_name"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(:version => 20120920211829) do
     t.boolean  "spring"
     t.text     "english_description"
     t.text     "chinese_description"
-    t.integer  "chapter"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
     t.string   "primary_image_file_name"
@@ -44,6 +43,19 @@ ActiveRecord::Schema.define(:version => 20120920211829) do
     t.string   "song_content_type"
     t.integer  "song_file_size"
     t.datetime "song_updated_at"
+    t.integer  "chapter_id"
+  end
+
+  create_table "chapters", :force => true do |t|
+    t.text     "name"
+    t.integer  "number"
+    t.text     "english_story"
+    t.text     "chinese_story"
+    t.text     "tibetan_story"
+    t.text     "english_description"
+    t.text     "chinese_description"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
 end
