@@ -1,0 +1,77 @@
+<div class="container_12">
+	<p id="notice"><%= notice %></p>
+
+	<div class="grid_6">
+		<p>
+		  <b>Common name:</b>
+		  <%= @bird.common_name %>
+		</p>
+
+		<p>
+		  <b>Scientific name:</b>
+		  <%= @bird.scientific_name %>
+		</p>
+
+		<p>
+		  <b>Chinese name:</b>
+		  <%= @bird.chinese_name %>
+		</p>
+
+		<p>
+		  <b>Tibetan name:</b>
+		  <%= @bird.tibetan_name %>
+		</p>
+
+		<p>
+		  <%= image_tag @bird.primary_image.url(:main) %> 
+		</p>
+		
+		<p>
+		  <audio src="<%= @bird.song.url %>" controls></audio>
+		</p>
+	 </div>
+
+	<div class="grid_6">
+		<p>
+		  <%= image_tag @bird.secondary_image.url(:main), style: 'float: right; margin: 5px;' %>
+		  <%= @bird.english_description %>
+		</p>
+
+		<p>
+		  <%= @bird.chinese_description %>
+		</p>
+		<p>
+		  <b>Size:</b> 
+		  <%= @bird.size %> cm
+		</p>
+
+		<p>
+	
+		  <% if @bird.summer %>
+		  <%= image_tag "summer.png" %>
+		  <% end %>
+		
+		  <% if @bird.fall %>
+		  <%= image_tag "fall.png" %>
+		  <% end %>
+
+		  <% if @bird.winter %>
+		  <%= image_tag "winter.png" %>
+		  <% end %>
+	
+		  <% if @bird.spring %>
+		  <%= image_tag "spring.png" %>
+		  <% end %>
+		</p>
+
+		<%= image_tag @bird.range_map.url(:main) %>
+		<p>
+		  <b>Chapter:</b>
+		  <%= link_to @bird.chapter.name, @bird.chapter %>
+		</p>
+
+	</div>
+
+	<%= link_to 'Edit', edit_bird_path(@bird) %> |
+	<%= link_to 'Back', birds_path %>
+</div>

@@ -1,0 +1,37 @@
+<h1>Listing chapters</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+	<th>Chinese_name</th>
+    <th>Number</th>
+    <th>English story</th>
+    <th>Chinese story</th>
+    <th>Tibetan story</th>
+    <th>English description</th>
+    <th>Chinese description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @chapters.each do |chapter| %>
+  <tr>
+    <td><%= chapter.name %></td>
+	<td><%= chapter.chinese_name %></td>
+    <td><%= chapter.number %></td>
+    <td><%= chapter.english_story %></td>
+    <td><%= chapter.chinese_story %></td>
+    <td><%= chapter.tibetan_story %></td>
+    <td><%= chapter.english_description %></td>
+    <td><%= chapter.chinese_description %></td>
+    <td><%= link_to 'Show', chapter %></td>
+    <td><%= link_to 'Edit', edit_chapter_path(chapter) %></td>
+    <td><%= link_to 'Destroy', chapter, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Chapter', new_chapter_path %>

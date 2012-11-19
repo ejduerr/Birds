@@ -1,8 +1,11 @@
 Birds::Application.routes.draw do
   resources :chapters
-
   resources :birds
-
-   root :to => 'welcome#index'
-
+  
+  namespace :admin do
+	  resources :chapters
+	  resources :birds
+  end
+  
+  root :to => 'welcome#index'
 end
