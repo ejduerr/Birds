@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
+	<th>Chinese_name</th>
     <th>Number</th>
     <th>English story</th>
     <th>Chinese story</th>
@@ -17,6 +18,7 @@
 <% @chapters.each do |chapter| %>
   <tr>
     <td><%= chapter.name %></td>
+	<td><%= chapter.chinese_name %></td>
     <td><%= chapter.number %></td>
     <td><%= chapter.english_story %></td>
     <td><%= chapter.chinese_story %></td>
