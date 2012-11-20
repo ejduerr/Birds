@@ -2,7 +2,12 @@ class BirdsController < ApplicationController
   # GET /birds
   # GET /birds.json
   def index
-    @birds = Bird.all
+    @birds = Bird.scoped
+	if params[:search]
+		@birds = @birds.where("common_name LIKE :text OR scientific_name LIKE :text OR chinese_name LIKE :text OR tibetan_name LIKE :text OR english_description LIKE :text OR chinese_description LIKE :text", :text => "%#{params[:search]}%")
+	end
+	
+	flash.now[:error] = "No birds found" if @birds.empty?
 
     respond_to do |format|
       format.html # index.html.erb
