@@ -1,17 +1,17 @@
-		<div class="container_12">
-		  <div class="grid_12">insert banner photo here</div>
-		  
-		  <div class="clear"></div>
-		  
-		  <div class="grid_12">insert search finder here</div>
-		  <div class="clear"></div>
-		  
-		  <% birds = Bird.all.shuffle %>
-		  
-		  <% birds[0...18].each_slice(6) do |bird_row| %>
-			<% bird_row.each do |bird| %>
-			    <div class="grid_2"><%=link_to image_tag(bird.primary_image.url(:thumb), id: bird.id), bird %></div>
-			<% end %>
-		    <div class="clear"></div>
-		  <% end %>
-		</div>
+<div class="container_12">
+  <div class="grid_12">insert banner photo here</div>
+  
+  <div class="clear"></div>
+  
+  <%= render 'birds/search' %>
+  <div class="clear"></div>
+  
+  <% birds = Bird.all.shuffle %>
+  
+  <% birds[0...18].each_slice(6) do |bird_row| %>
+	<% bird_row.each do |bird| %>
+		<div class="grid_2"><%=link_to image_tag(bird.primary_image.url(:thumb), id: bird.id), bird %></div>
+	<% end %>
+	<div class="clear"></div>
+  <% end %>
+</div>
