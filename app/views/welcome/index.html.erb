@@ -1,6 +1,14 @@
 <div class="container_12">
+  <div class="grid_4 push_2">
+    <h1 style="font-family: 'Libre Baskerville', serif;">Birds of Shangrila </h1> 
+  </div>
+  <div class="grid_4 push_3">
+    <%= render 'birds/search' %>
+  </div>
+  <div class="clear"></div>
+   
   <div class="grid_12">
-    <div style="padding: 0 150px;">
+	    <div style="padding: 0 150px;">
 		<ul class="bxslider">
 			<li><%=image_tag("banner/Fantail.JPG")%></li>
 			<li><%=image_tag("banner/Rosefinch.JPG")%></li>
@@ -14,8 +22,8 @@
   
   <div class="clear"></div>
   
-  <%= render 'birds/search' %>
-  <div class="clear"></div>
+
+ 
   
   <% birds = Bird.all.shuffle %>
   
