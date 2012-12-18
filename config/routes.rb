@@ -1,4 +1,6 @@
 Birds::Application.routes.draw do
+  resources :banners
+
   resources :chapters
   resources :birds
   

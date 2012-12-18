@@ -6,25 +6,26 @@
     <%= render 'birds/search' %>
   </div>
   <div class="clear"></div>
-   
-  <div class="grid_12">
+  
+    <div class="grid_12">
 	    <div style="padding: 0 150px;">
 		<ul class="bxslider">
-			<li><%=image_tag("banner/Fantail.JPG")%></li>
-			<li><%=image_tag("banner/Rosefinch.JPG")%></li>
-			<li><%=image_tag("banner/Sunbird.JPG")%></li>
-			<li><%=image_tag("banner/Tit.JPG")%></li>
-			<li><%=image_tag("banner/Pkeet.JPG")%></li>
-			<li><%=image_tag("banner/Yuhina.JPG")%></li>
+		<% Banner.all.each do |banner| %>
+			<li><%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %></li>
+		<% end %>
 		</ul>
 	</div>
   </div>
   
   <div class="clear"></div>
   
-
- 
+  <% Chapter.all.each do |chapter| %>
+	<div class="grid_2"><%=link_to image_tag(chapter.main_image.url(:thumb), id: chapter.id), chapter %></div>
+  <% end %>
+  <div class="clear"></div>
   
+  <br />  <br />
+   
   <% birds = Bird.all.shuffle %>
   
   <% birds[0...18].each_slice(6) do |bird_row| %>

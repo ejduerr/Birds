@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121025213510) do
+ActiveRecord::Schema.define(:version => 20121218223836) do
+
+  create_table "banners", :force => true do |t|
+    t.integer  "bird_id"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "main_image_file_name"
+    t.string   "main_image_content_type"
+    t.integer  "main_image_file_size"
+    t.datetime "main_image_updated_at"
+  end
 
   create_table "birds", :force => true do |t|
     t.string   "common_name"
@@ -54,9 +64,13 @@ ActiveRecord::Schema.define(:version => 20121025213510) do
     t.text     "tibetan_story"
     t.text     "english_description"
     t.text     "chinese_description"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
     t.text     "chinese_name"
+    t.string   "main_image_file_name"
+    t.string   "main_image_content_type"
+    t.integer  "main_image_file_size"
+    t.datetime "main_image_updated_at"
   end
 
 end
