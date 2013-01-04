@@ -1,57 +1,55 @@
-<p id="notice"><%= notice %></p>
+<div class="container_12">
+	<div class="grid_10">
+		<div class="grid_5 alpha">
+			 <%= image_tag @chapter.main_image.url(:main) %> 
+		</div>
+		<div class="grid_5 omega">
+			 <%= @chapter.name %>
+			 <p>
+				<%= @chapter.chinese_name %>
+			 </p>
+		</div>
+		<div class="clear"></div>
+		<div class="grid_10 alpha omega">
+			<div>
+				<b>English story:</b>
+				<%= @chapter.english_story %>
+			</div>	
 
-<p>
-  <b>Name:</b>
-  <%= @chapter.name %>
-</p>
+			<div>
+				<b>Chinese story:</b>
+				<%= @chapter.chinese_story %>
+			</div>
+			
+			<div>
+				<b>Tibetan story:</b>
+				<%= @chapter.tibetan_story %>
+			</div>
+			
+		</div>
+		<div class="clear"></div>
 
-<p>
-  <b>Chinese_name:</b>
-  <%= @chapter.chinese_name %>
-</p>
-
-<p>
-  <%= image_tag @chapter.main_image.url(:main) %> 
-</p>
-
-<p>
-  <b>Number:</b>
-  <%= @chapter.number %>
-</p>
-
-<p>
-  <b>English story:</b>
-  <%= @chapter.english_story %>
-</p>
-
-<p>
-  <b>Chinese story:</b>
-  <%= @chapter.chinese_story %>
-</p>
-
-<p>
-  <b>Tibetan story:</b>
-  <%= @chapter.tibetan_story %>
-</p>
-
-<p>
-  <b>English description:</b>
-  <%= @chapter.english_description %>
-</p>
-
-<p>
-  <b>Chinese description:</b>
-  <%= @chapter.chinese_description %>
-</p>
-
-<p>
-  <b>Birds</b>
-  <ul>
-  <% @chapter.birds.each do |bird| %>
-    <li><%= link_to bird.common_name, bird %></li>
-  <% end %>
-  </ul>
-</p>
-
-<%= link_to 'Edit', edit_chapter_path(@chapter) %> |
-<%= link_to 'Back', chapters_path %>
+		<div class="grid_10 alpha omega">
+			
+			<div>
+				<b>English description:</b>
+				<%= @chapter.english_description %>
+			</div>
+			
+			<div>
+				<b>Chinese description:</b>
+				<%= @chapter.chinese_description %>
+			</div>
+		</div>
+		<div class="clear"></div>
+	
+	</div>		
+	<div class="grid_2">
+		
+		<% @chapter.birds.each do |bird| %>
+			<%= link_to bird.common_name, bird %>
+		<% end %>
+		
+	</div>
+	<div class="clear"></div>
+</div>
