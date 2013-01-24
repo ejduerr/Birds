@@ -1,15 +1,15 @@
 <div class="container_12">
 	<%= render 'welcome/heading' %>
-	<div class="grid_10">
-		<div class="grid_5 alpha">
-
-			 <%= @chapter.name %>
-			 <p>
-				<%= @chapter.chinese_name %>
+	<div class="grid_12">
+		<div class="grid_12 alpha">
+			<h1 style="font-family: 'Libre Baskerville', serif;"><%= @chapter.name %> </h1> 
 			 </p>
-			 <%= image_tag @chapter.main_image.url(:main) %> 
+			 <h1 style="font-family: 'Libre Baskerville', serif;"><%= @chapter.chinese_name %></h1> 
+
 		</div>
-		<div class="grid_5 omega">
+
+	
+		<div class="grid_6 alpha">
 			<div class="tabs">
 				<ul>
 					<li><a href="#tabs-1">Description</a></li>
@@ -19,45 +19,52 @@
 				<div id="tabs-1">
 					<%= @chapter.english_description %>
 				</div>	
-			
-			
+					
 				<div id="tabs-2">
 					<%= @chapter.chinese_description %>
 				</div>
-			</div>	
+			</div>			
 		</div>
-		
-		<div class="clear"></div>
-		<div class="grid_10 alpha omega">
-			 <div class="tabs">
+
+		<div class="grid_6 omega">
+			<% @chapter.birds.each do |bird| %>
+				<%= link_to image_tag(bird.primary_image.url(:tiny)), bird %>
+			<% end %>
+				
+			<div class="clear"></div>
+	</div>
+
+	<div class="grid_12">			
+		<div class="grid_5 alpha">				
+			<%= image_tag @chapter.main_image.url(:main) %> 	
+		</div>
+
+		<div class="grid_7 omega">
+			
+			<div class="tabs">
 				<ul>
 					<li><a href="#tabs-1">Story</a></li>
 					<li><a href="#tabs-2">Chinese</a></li>
 					<li><a href="#tabs-3">Tibetan</a></li>
-				</ul>
-				
+			
+				</ul>	
 				<div id="tabs-1">
 					<%= @chapter.english_story %>
 				</div>	
 				<div id="tabs-2">
 					<%= @chapter.chinese_story %>
 				</div>
-		
+			
 				<div id="tabs-3">
 					<%= @chapter.tibetan_story %>
 				</div>
 			</div>
-		</div>
-		<div class="clear"></div>
+		
+			<div class="clear"></div>
 
-	
-	</div>		
-	<div class="grid_2">
-		
-		<% @chapter.birds.each do |bird| %>
-			<%= link_to image_tag(bird.primary_image.url(:tiny)), bird %>
-		<% end %>
-		
+		</div>	
 	</div>
-	<div class="clear"></div>
+
 </div>
+	<div class="clear"></div>
+

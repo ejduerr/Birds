@@ -1,5 +1,11 @@
 <div class="container_12">
-	<%= render 'welcome/heading' %>
+<div class="grid_4 push_2">
+	<h1 style="font-family: 'Libre Baskerville', serif;">Birds of Shangrila </h1> 
+</div>
+<div class="grid_4 push_3 ">
+	<%= render 'birds/search' %>
+</div>
+<div class="clear"></div>
   
     <div class="grid_12">
 	    <div style="padding: 0 150px;">
@@ -22,7 +28,7 @@
    
   <% birds = Bird.all.shuffle %>
   
-  <% birds[0...18].each_slice(6) do |bird_row| %>
+  <% birds[0...12].each_slice(4) do |bird_row| %>
 	<% bird_row.each do |bird| %>
 		<div class="grid_2"><%=link_to image_tag(bird.primary_image.url(:thumb), id: bird.id), bird %></div>
 	<% end %>

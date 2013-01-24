@@ -3,22 +3,21 @@
 
 	<div class="grid_6">
 		<p>
-		  <b>Common name:</b>
 		  <%= @bird.common_name %>
 		</p>
 
 		<p>
-		  <b>Scientific name:</b>
-		  <%= @bird.scientific_name %>
+
+		  <i><%= @bird.scientific_name %></i>
 		</p>
 
 		<p>
-		  <b>Chinese name:</b>
+		  Chinese name:
 		  <%= @bird.chinese_name %>
 		</p>
 
 		<p>
-		  <b>Tibetan name:</b>
+		  Tibetan name:
 		  <%= @bird.tibetan_name %>
 		</p>
 
@@ -46,7 +45,9 @@
 		</p>
 
 		<p>
-	
+		 <p>	
+		  <b>Seasons:</b>
+		 </p>
 		  <% if @bird.summer %>
 		  <%= image_tag "summer.png" %>
 		  <% end %>
@@ -66,7 +67,7 @@
 
 		<%= image_tag @bird.range_map.url(:main) %>
 		<p>
-		  <b>Chapter:</b>
+
 		  <%= link_to @bird.chapter.name, @bird.chapter %>
 		</p>
 
