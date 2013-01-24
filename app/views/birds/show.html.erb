@@ -3,12 +3,12 @@
 
 	<div class="grid_6">
 		<p>
-		  <%= @bird.common_name %>
+		  <h4 style="font-family: 'Libre Baskerville', serif;"><%= @bird.common_name %> </h4> 
 		</p>
-
+	
 		<p>
 
-		  <i><%= @bird.scientific_name %></i>
+		  <i><%=@bird.scientific_name %></i>
 		</p>
 
 		<p>
@@ -28,9 +28,11 @@
 		<p>
 		  <audio src="<%= @bird.song.url %>" controls></audio>
 		</p>
-	 </div>
+	</div>
 
 	<div class="grid_6">
+		<BR></BR>
+
 		<p>
 		  <%= image_tag @bird.secondary_image.url(:main), style: 'float: right; margin: 5px;' %>
 		  <%= @bird.english_description %>
@@ -40,14 +42,14 @@
 		  <%= @bird.chinese_description %>
 		</p>
 		<p>
-		  <b>Size:</b> 
+		  Size: 
 		  <%= @bird.size %> cm
 		</p>
 
 		<p>
 		 <p>	
-		  <b>Seasons:</b>
-		 </p>
+		  Seasons:
+		  </p>
 		  <% if @bird.summer %>
 		  <%= image_tag "summer.png" %>
 		  <% end %>
