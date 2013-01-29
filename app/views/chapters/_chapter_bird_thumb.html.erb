@@ -1,5 +1,4 @@
-<div class="chapter_bird_thumb_frame">
+<li class="chapter_bird_thumb_frame">
 	<%= link_to image_tag(bird.primary_image.url(:tiny)), bird %>
-	<br>
-	<%= bird.common_name %>
-</div>
+	<%= link_to bird.common_name, bird %>
+</li>

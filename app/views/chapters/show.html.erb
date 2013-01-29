@@ -21,30 +21,32 @@
 				</div>	
 					
 				<div id="tabs-2">
-					<%= @chapter.chinese_description %>
+					<%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_description).html_safe %>				
 				</div>
 			</div>
 			
 		</div>
 
 		<div class="grid_6 omega">
-			<% @chapter.birds.each do |bird| %>
-				<div class="grid_2 alpha">
-					<%= render "chapter_bird_thumb", bird: bird %>
-				</div>
-			<% end %>
-				
+			<div class="chapter_bird_thumb_container">
+				<ul>
+					<% @chapter.birds.each do |bird| %>
+						<%= render "chapter_bird_thumb", bird: bird %>
+					<% end %>
+				</ul>
+				SEARCH STUFF <input type="text"></input>
+			</div>				
 			<div class="clear"></div>
 		
 	</div>
- <br> <br/>
- <br> <br/>
+<br> <br/>
+<br> <br/>
 	<div class="grid_12">			
-		<div class="grid_5 alpha">				
+		<div class="grid_6 alpha">				
 			<%= image_tag @chapter.main_image.url(:main) %> 	
 		</div>
 
-		<div class="grid_7 omega">
+		<div class="grid_6 omega">
 			
 			<div class="tabs">
 				<ul>
@@ -54,14 +56,14 @@
 			
 				</ul>	
 				<div id="tabs-1">
-					<%= @chapter.english_story %>
+					<%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.english_story).html_safe %>				
 				</div>	
 				<div id="tabs-2">
-					<%= @chapter.chinese_story %>
+					<%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_story).html_safe %>					
 				</div>
 			
 				<div id="tabs-3">
-					<%= @chapter.tibetan_story %>
+					<%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.tibetan_story).html_safe %>					
 				</div>
 			</div>
 		

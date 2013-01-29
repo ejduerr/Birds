@@ -6,6 +6,23 @@
 }
 
 .chapter_bird_thumb_frame {
-  border: 1px solid #aaa;
-  color: #666;
+  color: maroon;
+  background-color: #e9b96e;
+  list-style: none;
+  margin-bottom: 1px;
+  height: 45px;
+}
+
+.chapter_bird_thumb_frame img {
+  height: 45px;
+  width: 45px;
+}
+
+.chapter_bird_thumb_container {
+  background-color: #c17d11;
+
+}
+.chapter_bird_thumb_container ul {
+  height: 400px;
+  overflow-y: auto;
 }

@@ -20,7 +20,11 @@
   <div class="clear"></div>
   
   <% Chapter.all.each do |chapter| %>
-	<div class="grid_2"><%=link_to image_tag(chapter.main_image.url(:thumb), id: chapter.id), chapter %></div>
+	<div class="grid_2">
+
+		<%= render "welcome_chapter_image", chapter: chapter %>
+		</div>
+		
   <% end %>
   <div class="clear"></div>
   
