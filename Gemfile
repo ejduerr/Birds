@@ -38,3 +38,6 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# Markdown for paragraphs
+gem 'redcarpet'

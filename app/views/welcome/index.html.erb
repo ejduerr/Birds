@@ -29,6 +29,7 @@
   <% birds = Bird.all.shuffle %>
   
   <% birds[0...12].each_slice(4) do |bird_row| %>
+    <div class="grid_2">&nbsp;</div>
 	<% bird_row.each do |bird| %>
 		<div class="grid_2"><%=link_to image_tag(bird.primary_image.url(:thumb), id: bird.id), bird %></div>
 	<% end %>
