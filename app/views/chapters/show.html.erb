@@ -3,13 +3,24 @@
 	<div class="grid_12">
 		<div class="grid_12 alpha">
 			<h4 style="font-family: 'Libre Baskerville', serif;"><%= @chapter.name %> </h4> 
-			 </p>
-			 <h4 style="font-family: 'Libre Baskerville', serif;"><%= @chapter.chinese_name %></h4> 
-
+			<h4 style="font-family: 'Libre Baskerville', serif;"><%= @chapter.chinese_name %></h4> 	
 		</div>
 
-	
 		<div class="grid_6 alpha">
+
+			<div class="chapter_bird_thumb_container">
+			<h5>Bird List<h5>		
+				<ul>
+					<% @chapter.birds.each do |bird| %>
+						<%= render "chapter_bird_thumb", bird: bird %>
+					<% end %>
+				</ul>
+				 QUICK SEARCH <input type="text"></input>
+			</div>				
+			<div class="clear"></div>		
+		</div>
+		
+		<div class="grid_6 omega">
 			<div class="tabs">
 				<ul>
 					<li><a href="#tabs-1">Description</a></li>
@@ -26,27 +37,12 @@
 			</div>
 			
 		</div>
-
-		<div class="grid_6 omega">
-			<div class="chapter_bird_thumb_container">
-				<ul>
-					<% @chapter.birds.each do |bird| %>
-						<%= render "chapter_bird_thumb", bird: bird %>
-					<% end %>
-				</ul>
-				SEARCH STUFF <input type="text"></input>
-			</div>				
-			<div class="clear"></div>
-		
+	
 	</div>
 <br> <br/>
 <br> <br/>
-	<div class="grid_12">			
-		<div class="grid_6 alpha">				
-			<%= image_tag @chapter.main_image.url(:main) %> 	
-		</div>
-
-		<div class="grid_6 omega">
+	<div class="grid_12">	
+		<div class="grid_6 alpha">
 			
 			<div class="tabs">
 				<ul>
@@ -68,8 +64,11 @@
 			</div>
 		
 			<div class="clear"></div>
+		</div>			
+		<div class="grid_6 omega">				
+			<%= image_tag @chapter.main_image.url(:main) %> 	
+		</div>
 
-		</div>	
 	</div>
 
 </div>

@@ -1,13 +1,14 @@
 // Place all the styles related to the birds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Forum);
 .bxslider li {
  margin-left: 0px;
 }
 
 .chapter_bird_thumb_frame {
-  color: maroon;
-  background-color: #e9b96e;
+  color: #14191B;
+  background-color: #445156;
   list-style: none;
   margin-bottom: 1px;
   height: 45px;
@@ -19,10 +20,11 @@
 }
 
 .chapter_bird_thumb_container {
-  background-color: #c17d11;
+  background-color: #273942;
 
 }
 .chapter_bird_thumb_container ul {
-  height: 400px;
+  height: 275px;
   overflow-y: auto;
 }
+.container_12 {font-family: 'Forum' !important;}
