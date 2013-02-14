@@ -1,76 +1,71 @@
-<div class="container_12">
-	<%= render 'welcome/heading' %>
-	<div class="grid_12">
-		<div class="grid_12 alpha">
-			<h4 style="font-family: 'Libre Baskerville', serif;"><%= @chapter.name %> </h4> 
-			<h4 style="font-family: 'Libre Baskerville', serif;"><%= @chapter.chinese_name %></h4> 	
-		</div>
+<div class="container">
+  <%= render 'welcome/heading' %>
+  <div class="grid_12">
+    <div class="grid_12 alpha">
+      <h4 style="font-family: 'Libre Baskerville', serif;"><%= @chapter.name %> </h4> 
+      <h4 style="font-family: 'Libre Baskerville', serif;"><%= @chapter.chinese_name %></h4>  
+    </div>
 
-		<div class="grid_6 alpha">
+    <div class="grid_6 alpha">
+      <div class="chapter_bird_thumb_container">
+      <h5>Bird List<h5>   
+        <ul>
+          <% @chapter.birds.each do |bird| %>
+            <%= render "chapter_bird_thumb", bird: bird %>
+          <% end %>
+        </ul>
+         QUICK SEARCH <input type="text"></input>
+      </div>
+      <div class="clear"></div>
+    </div>
 
-			<div class="chapter_bird_thumb_container">
-			<h5>Bird List<h5>		
-				<ul>
-					<% @chapter.birds.each do |bird| %>
-						<%= render "chapter_bird_thumb", bird: bird %>
-					<% end %>
-				</ul>
-				 QUICK SEARCH <input type="text"></input>
-			</div>				
-			<div class="clear"></div>		
-		</div>
-		
-		<div class="grid_6 omega">
-			<div class="tabs">
-				<ul>
-					<li><a href="#tabs-1">Description</a></li>
-					<li><a href="#tabs-2">Chinese</a></li>
-				</ul>
-			
-				<div id="tabs-1">
-					<%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.english_description).html_safe %>
-				</div>	
-					
-				<div id="tabs-2">
-					<%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_description).html_safe %>				
-				</div>
-			</div>
-			
-		</div>
-	
-	</div>
-<br> <br/>
-<br> <br/>
-	<div class="grid_12">	
-		<div class="grid_6 alpha">
-			
-			<div class="tabs">
-				<ul>
-					<li><a href="#tabs-1">Story</a></li>
-					<li><a href="#tabs-2">Chinese</a></li>
-					<li><a href="#tabs-3">Tibetan</a></li>
-			
-				</ul>	
-				<div id="tabs-1">
-					<%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.english_story).html_safe %>				
-				</div>	
-				<div id="tabs-2">
-					<%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_story).html_safe %>					
-				</div>
-			
-				<div id="tabs-3">
-					<%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.tibetan_story).html_safe %>					
-				</div>
-			</div>
-		
-			<div class="clear"></div>
-		</div>			
-		<div class="grid_6 omega">				
-			<%= image_tag @chapter.main_image.url(:main) %> 	
-		</div>
+    <div class="grid_6 omega">
+      <div class="tabs">
+        <ul>
+          <li><a href="#tabs-1">Description</a></li>
+          <li><a href="#tabs-2">Chinese</a></li>
+        </ul>
 
-	</div>
+        <div id="tabs-1">
+          <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.english_description).html_safe %>
+        </div>
+
+        <div id="tabs-2">
+          <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_description).html_safe %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br> <br/>
+  <br> <br/>
+
+  <div class="grid_12"> 
+    <div class="grid_6 alpha">
+      <div class="tabs">
+        <ul>
+          <li><a href="#tabs-1">Story</a></li>
+          <li><a href="#tabs-2">Chinese</a></li>
+          <li><a href="#tabs-3">Tibetan</a></li>
+        </ul>
+        <div id="tabs-1">
+          <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.english_story).html_safe %>
+        </div>
+        <div id="tabs-2">
+          <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_story).html_safe %>
+        </div>
+        <div id="tabs-3">
+          <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.tibetan_story).html_safe %>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="grid_6 omega">
+      <%= image_tag @chapter.main_image.url(:main) %>
+    </div>
+
+  </div>
 
 </div>
-	<div class="clear"></div>
+  <div class="clear"></div>
 

@@ -1,43 +1,46 @@
-<div class="container_12">
-<div class="grid_4 push_2">
-	<h1 style="font-family: 'Libre Baskerville', serif;">Birds of Shangrila </h1> 
-</div>
-<div class="grid_4 push_3 ">
-	<%= render 'birds/search' %>
-</div>
-
-<div class="clear"></div>
-  
-    <div class="grid_12">
-	    <div style="padding: 0 150px;">
-		<ul class="bxslider">
-		<% Banner.all.each do |banner| %>
-			<li><%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %></li>
-		<% end %>
-		</ul>
-	</div>
+<div class="container">
+  <div class="row">
+    <div class="span4 offset2">
+      <h1 style="font-family: 'Libre Baskerville', serif;">Birds of Shangrila </h1> 
+    </div>
+    <div class="span4">
+      <%= render 'birds/search' %>
+    </div>
   </div>
-  
-  <div class="clear"></div>
-  
-  <% Chapter.all.each do |chapter| %>
-	<div class="grid_2">
 
-		<%= render "welcome_chapter_image", chapter: chapter %>
-		</div>
-		
-  <% end %>
-  <div class="clear"></div>
-  
+
+  <div class="row">
+    <div class="span12">
+      <div style="padding: 0 150px;">
+        <ul class="bxslider">
+          <% Banner.all.each do |banner| %>
+            <li><%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <% Chapter.all.each do |chapter| %>
+      <div class="span2">
+        <%= render "welcome_chapter_image", chapter: chapter %>
+      </div>
+    <% end %>
+  </div>
+
+
   <br />  <br />
-   
+
   <% birds = Bird.all.shuffle %>
-  
+
   <% birds[0...12].each_slice(4) do |bird_row| %>
-    <div class="grid_2">&nbsp;</div>
-	<% bird_row.each do |bird| %>
-		<div class="grid_2"><%=link_to image_tag(bird.primary_image.url(:thumb), id: bird.id), bird %></div>
-	<% end %>
-	<div class="clear"></div>
+    <div class="row">
+      <div class="span2">&nbsp;</div>
+      <% bird_row.each do |bird| %>
+        <div class="span2"><%=link_to image_tag(bird.primary_image.url(:thumb), id: bird.id), bird %></div>
+      <% end %>
+    </div>
   <% end %>
 </div>
