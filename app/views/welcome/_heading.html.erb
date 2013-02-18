@@ -1,16 +1,19 @@
-<div class="grid_4 ">
-	<h1 style="font-family: 'Libre Baskerville', serif;">Birds of Shangrila </h1> 
+<div class="row">
+  <div class="span12">
+    <h1 style="font-family: 'Libre Baskerville', serif;"><%= link_to "Birds of Shangrila", root_url %></h1> 
+  </div>
 </div>
 
-<div class="grid_4 push_4 ">
-	<%= render 'birds/search' %>
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <% Chapter.all.each do |chapter| %>
+         <li><%= link_to chapter.name.truncate(5), chapter %></li>
+       <%end %>
+    </ul>
+	<form class="navbar-form pull-right">
+         <input type="text" class="search-query" placeholder="Search">
+		 <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
 </div>
-<div class="clear"></div>
-
-<ul>
-<% Chapter.all.each do |chapter| %>
-	<li><%= link_to chapter.name, chapter %></li>
-
-<% end %>
-</ul>
-
