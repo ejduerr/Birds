@@ -1,86 +1,51 @@
-<div class="container-fluid">
-	<%= render 'welcome/heading' %>
-	<p id="row-fluid"> 
-	<!-- <%= notice %>--></p> 
-
-	<div class="span6">
-		<p>
-		  <h4 style="font-family: 'Libre Baskerville', serif;"><%= @bird.common_name %> </h4> 
-		</p>
-	
-		<p>
-
-		  <i><%=@bird.scientific_name %></i>
-		</p>
-
-		<p>
-		  Chinese name:
-		  <%= @bird.chinese_name %>
-		</p>
-
-		<p>
-		  Tibetan name:
-		  <%= @bird.tibetan_name %>
-		</p>
-
-		<p>
-		  <%= image_tag @bird.primary_image.url(:main) %> 
-		</p>
-		
-		<p>
-		  <audio src="<%= @bird.song.url %>" controls></audio>
-		</p>
-	</div>
-
-	<div class="span6">
-		<BR></BR>
-
-		<p>
-		  <%= image_tag @bird.secondary_image.url(:main), style: 'float: right; margin: 5px;' %>
-		  <%= @bird.english_description %>
-		</p>
-
-		<p>
-		  <%= @bird.chinese_description %>
-		</p>
-		<p>
-		  Size: 
-		  <%= @bird.size %> cm
-		</p>
-
-		<p>
-		 <p>	
-		  Seasons:
-		  </p>
-		  <% if @bird.summer %>
-		  <%= image_tag "summer.png" %>
-		  <% end %>
-		
-		  <% if @bird.fall %>
-		  <%= image_tag "fall.png" %>
-		  <% end %>
-
-		  <% if @bird.winter %>
-		  <%= image_tag "winter.png" %>
-		  <% end %>
-	
-		  <% if @bird.spring %>
-		  <%= image_tag "spring.png" %>
-		  <% end %>
-		</p>
-
-		<%= image_tag @bird.range_map.url(:main) %>
-		<p>
-
-		  <%= link_to @bird.chapter.name, @bird.chapter %>
-		</p>
-
-	</div>
-	<!--<ul class="pager">
-		<li><a href="#">Previous</a></li>
-		<li><a href="#">Next</a></li>
-	</ul> -->
-	<%= link_to 'Edit', edit_bird_path(@bird) %> |
-	<%= link_to 'Back', birds_path %>
-	
-</div>
+<html>
+    <head>
+        <meta name="generator"
+        content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+        <title></title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <%= render 'welcome/heading' %>
+            <div class="row-fluid">
+                <div class="span6">
+                    <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
+                        <%= @bird.common_name %>
+                    </h4>
+                    <p>
+                        <i>
+                            <%=@bird.scientific_name %>
+                        </i>
+                    </p>
+                    <p>Chinese name: <%= @bird.chinese_name %></p>
+                    <p>Tibetan name: <%= @bird.tibetan_name %></p>
+                    <p>
+                        <%= image_tag @bird.primary_image.url(:main) %>
+                    </p>
+                    <p>
+                        <audio src="%3C%=%20@bird.song.url%20%%3E" controls=""></audio>
+                    </p>
+                </div>
+                <div class="span6">
+                    <br />
+                    <br />
+                    <p><%= image_tag @bird.secondary_image.url(:main), style: 'float: right; margin: 5px;' %>
+                    <%= @bird.english_description %></p>
+                    <p>
+                        <%= @bird.chinese_description %>
+                    </p>
+                    <p>Size: <%= @bird.size %> cm</p>
+                    <p>
+                    Seasons:</p><% if @bird.summer %><%= image_tag "summer.png" %><% end %><% if @bird.fall %><%= image_tag "fall.png" %><% end %><% if @bird.winter %><%= image_tag "winter.png" %><% end %><% if @bird.spring %><%= image_tag "spring.png" %><% end %><%= image_tag @bird.range_map.url(:main) %>
+                    <p>
+                        <%= link_to @bird.chapter.name, @bird.chapter %>
+                    </p>
+                </div>
+            </div>
+            <!--<ul class="pager">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Next</a></li>
+        </ul> -->
+        </div>
+    </body>
+</html>
