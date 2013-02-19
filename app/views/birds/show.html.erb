@@ -1,8 +1,9 @@
-<div class="container_12">
+<div class="container-fluid">
 	<%= render 'welcome/heading' %>
-	<p id="notice"><%= notice %></p>
+	<p id="row-fluid"> 
+	<!-- <%= notice %>--></p> 
 
-	<div class="grid_6">
+	<div class="span6">
 		<p>
 		  <h4 style="font-family: 'Libre Baskerville', serif;"><%= @bird.common_name %> </h4> 
 		</p>
@@ -31,7 +32,7 @@
 		</p>
 	</div>
 
-	<div class="grid_6">
+	<div class="span6">
 		<BR></BR>
 
 		<p>
@@ -75,7 +76,11 @@
 		</p>
 
 	</div>
-
+	<!--<ul class="pager">
+		<li><a href="#">Previous</a></li>
+		<li><a href="#">Next</a></li>
+	</ul> -->
 	<%= link_to 'Edit', edit_bird_path(@bird) %> |
 	<%= link_to 'Back', birds_path %>
+	
 </div>

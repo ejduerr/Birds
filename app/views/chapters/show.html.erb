@@ -1,12 +1,13 @@
-<div class="container">
+<div class="container-fluid">
   <%= render 'welcome/heading' %>
-  <div class="grid_12">
-    <div class="grid_12 alpha">
+  	<p id="fluid"> </p> 
+  <div class="row-fluid">
+    <!--<div class="grid_12 alpha"> -->
       <h4 style="font-family: 'Libre Baskerville', serif;"><%= @chapter.name %> </h4> 
       <h4 style="font-family: 'Libre Baskerville', serif;"><%= @chapter.chinese_name %></h4>  
-    </div>
+  </div>
 
-    <div class="grid_6 alpha">
+    <div class="span6">
       <div class="chapter_bird_thumb_container">
       <h5>Bird List<h5>   
         <ul>
@@ -19,29 +20,29 @@
       <div class="clear"></div>
     </div>
 
-    <div class="grid_6 omega">
-      <div class="tabs">
-        <ul>
-          <li><a href="#tabs-1">Description</a></li>
-          <li><a href="#tabs-2">Chinese</a></li>
+    <div class="span6">
+	  <div class="tabbable">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#tab1" data-toggle="tab">Description</a></li>
+		  <li><a href="#tab2" data-toggle="tab">Chinese</a></li>
         </ul>
 
-        <div id="tabs-1">
-          <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.english_description).html_safe %>
-        </div>
-
-        <div id="tabs-2">
-          <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_description).html_safe %>
+        <div class="tab-content">
+          <div class="tab-pane active" id="Description">
+			<p><%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.english_description).html_safe %></p>
+          </div>
+          <div class="tab-pane" id="Chinese">
+			<p><%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_description).html_safe %></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
   <br> <br/>
   <br> <br/>
 
-  <div class="grid_12"> 
-    <div class="grid_6 alpha">
+  <div class="row-fluid"> 
+    <div class="span6">
       <div class="tabs">
         <ul>
           <li><a href="#tabs-1">Story</a></li>
@@ -60,7 +61,7 @@
       </div>
       <div class="clear"></div>
     </div>
-    <div class="grid_6 omega">
+    <div class="span6">
       <%= image_tag @chapter.main_image.url(:main) %>
     </div>
 
