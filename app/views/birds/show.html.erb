@@ -27,17 +27,20 @@
                     </p>
                 </div>
                 <div class="span6">
-                    <br />
-                    <br />
+
                     <p><%= image_tag @bird.secondary_image.url(:main), style: 'float: right; margin: 5px;' %>
                     <%= @bird.english_description %></p>
                     <p>
                         <%= @bird.chinese_description %>
                     </p>
                     <p>Size: <%= @bird.size %> cm</p>
-                    <p>
-                    Seasons:</p><% if @bird.summer %><%= image_tag "summer.png" %><% end %><% if @bird.fall %><%= image_tag "fall.png" %><% end %><% if @bird.winter %><%= image_tag "winter.png" %><% end %><% if @bird.spring %><%= image_tag "spring.png" %><% end %><%= image_tag @bird.range_map.url(:main) %>
-                    <p>
+					
+                    Seasons:<p><% if @bird.summer %><%= image_tag "summer.png" %><% end %><% if @bird.fall %><%= image_tag "fall.png" %><% end %><% if @bird.winter %><%= image_tag "winter.png" %><% end %><% if @bird.spring %><%= image_tag "spring.png" %><% end %>
+                    </p>
+					<p>
+					    <%= image_tag @bird.range_map.url(:main) %>
+					</p>	
+					<p>
                         <%= link_to @bird.chapter.name, @bird.chapter %>
                     </p>
                 </div>
