@@ -20,11 +20,13 @@
             <div class="row-fluid">
                 <div class="span6">
                     <div class="chapter_bird_thumb_container">
-                    <h5>Bird List</h5>
+                    <b>Bird List</b>
                     <ul>
                         <% @chapter.birds.each do |bird| %><%= render "chapter_bird_thumb", bird: bird %><% end %>
-                    </ul>QUICK SEARCH 
-                    <input type="text" /></div>
+                    </ul>Quick Search 
+                    <input type="text"/></div>
+					<br></br>
+					
                     <div class="tabbable">
                         <ul class="nav nav-tabs">
                             <li class="active">

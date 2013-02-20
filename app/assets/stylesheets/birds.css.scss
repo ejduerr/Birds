@@ -12,6 +12,7 @@
   list-style: none;
   margin-bottom: 1px;
   height: 45px;
+
 }
 
 .chapter_bird_thumb_frame img {
@@ -19,9 +20,14 @@
   width: 45px;
 }
 
+
 .chapter_bird_thumb_container {
   background-color: #273942;
   color: #9E9173;
+  -moz-box-shadow: 1px 3px 5px #888;
+  -webkit-box-shadow: 1px 3px 5px #888;
+  box-shadow: 1px 3px 5px #888;
+  width: 375px;
 }
 
 .chapter_bird_thumb_container ul {
@@ -29,13 +35,23 @@
   overflow-y: auto;
   margin-right: 45px;
   color: #7E735B;
-  margin-left: 10px;
+  margin-left: 45px;
+  margin-top: 25px;
+  width: 290px;
 }
 .container-fluid {font-family: 'Forum' !important;}
 
 .image_tag {
   padding: 10px;
   box-shadow: 0px 1px 5px #aaa;
- }
+}
 
-  
+a {
+  color: #14191B;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #6B6352;
+}  
