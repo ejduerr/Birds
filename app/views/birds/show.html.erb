@@ -8,13 +8,23 @@
         <div class="container">
             <%= render 'welcome/heading' %>
             <div class="row">
+                <div class="span12">
+                <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
+					<%= link_to @bird.chapter.name, @bird.chapter %>
+                </h4>
+                <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
+                    <%= link_to @bird.chapter.chinese_name, @bird.chapter %>
+                </h4>	
+                </div>
+            </div> 				
+            <div class="row">
                 <div class="span6">
                     <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
                         <%= @bird.common_name %>
                     </h4>
                     <p>
                         <i>
-                            <%=@bird.scientific_name %>
+                            <%= @bird.scientific_name %>
                         </i>
                     </p>
                     <p>Chinese name: <%= @bird.chinese_name %></p>

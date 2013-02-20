@@ -1,14 +1,6 @@
 <div class="container">
-  <div class="row">
-    <div class="span4 offset2">
-      <h1 style="font-family: 'Libre Baskerville', serif;">Birds of Shangrila </h1> 
-    </div>
-    <div class="span4">
-      <%= render 'birds/search' %>
-    </div>
-  </div>
-
-
+  <%= render 'welcome/heading' %>
+ 
   <div class="row">
     <div class="span12">
       <div style="padding: 0 150px;">
@@ -32,10 +24,14 @@
 
 
   <br />  <br />
-  Jodi's text here
-  <%= image_tag("/system/birds/Shangrila_map.jpg")%>
-  <% birds = Bird.all.shuffle %>
-
+  <div class="span12 offset2">
+    <p>Jodi's text here</p>
+	 <br />  <br />
+	 <br />  <br />
+    <%= image_tag("/system/birds/Shangrila_map.jpg", :size => '675x675')%>
+    <% birds = Bird.all.shuffle %>
+  </div>
+  
   <% birds[0...12].each_slice(4) do |bird_row| %>
     <div class="row">
       <div class="span2">&nbsp;</div>

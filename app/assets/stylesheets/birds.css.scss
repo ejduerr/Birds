@@ -4,7 +4,7 @@
 @import url(http://fonts.googleapis.com/css?family=Domine);
 
 .bxslider li {
- margin-left: 0px;
+  margin-left: 0px;
 }
 
 .chapter_bird_thumb_frame {
@@ -18,33 +18,38 @@
 .chapter_bird_thumb_frame img {
   height: 45px;
   width: 45px;
+  padding: 0px;
+  box-shadow: 0px 0px 0px #888;
+  border: 0;
 }
 
 .chapter_bird_thumb_container {
   background-color: #273942;
   color: #9E9173;
   width: 375px;
-  -moz-box-shadow: 1px 3px 5px #888;
-  -webkit-box-shadow: 1px 3px 5px #888;
-  box-shadow: 1px 3px 5px #888;
+  -moz-box-shadow: 0px 2px 10px #777;
+  -webkit-box-shadow: 0px 2px 10px #777;
+  box-shadow: 0px 2px 10px #777;
   padding:3px; 
   border:1px solid #dddddd; 
   border-right:1px solid #c0c0c0; 
   border-bottom:1px solid #c0c0c0;
+
 }
 
 .chapter_bird_thumb_container ul {
   height: 275px;
   overflow-y: auto;
-  margin-right: 45px;
+  margin-right: 10px;
   color: #7E735B;
-  margin-left: 45px;
+  margin-left: 30px;
   margin-top: 25px;
   width: 290px;
 }
 
-.container {font-family: 'Domine' !important;
-
+.container {
+  font-family: 'Domine' !important;
+  background: #F4E9C8; 
 }
 
 a {
@@ -58,13 +63,34 @@ a:focus {
 }  
 
 img {
-  -moz-box-shadow: 1px 3px 5px #888;
-  -webkit-box-shadow: 1px 3px 5px #888;
-  box-shadow: 1px 3px 5px #888;
+  border-radius: 2px;
+  box-shadow: 0px 2px 10px #777;
   padding:4px; 
-  border:1px solid #dddddd; 
-  border-right:1px solid #c0c0c0; 
-  border-bottom:1px solid #c0c0c0;
-
+  border:1px solid #fff; 
+  background: #fff;
 }
 
+body {
+  background: #273942;
+}
+
+.display_box {
+  background: #EAE2CF;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0px 0px 5px #bbb;
+  margin:10px 10px;
+}
+
+.title {
+  background: #445156;
+  color: #eee;
+  padding: 50px;
+}  
+
+.title h1 a {
+  color: #eee;
+  text-shadow: 0px 0px 5px #444;
+}  
+
+  

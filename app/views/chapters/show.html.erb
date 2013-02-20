@@ -9,25 +9,28 @@
             <%= render 'welcome/heading' %>
             <div class="row">
                 <div class="span12">
-                    <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
-                        <%= @chapter.name %>
-                    </h4>
-                    <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
-                        <%= @chapter.chinese_name %>
-                    </h4>
+				    <div class="display_box">
+                        <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
+					      <%= link_to @chapter.name, @chapter %>
+                        </h4>
+                        <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
+                          <%= link_to @chapter.chinese_name, @chapter %>
+                        </h4>
+				    </div>	
                 </div>
-            </div>
+            </div> 				
             <div class="row">
                 <div class="span6">
+					<div class="display_box">
                     <div class="chapter_bird_thumb_container">
                     <b>Bird List</b>
                     <ul>
                         <% @chapter.birds.each do |bird| %><%= render "chapter_bird_thumb", bird: bird %><% end %>
                     </ul>Quick Search 
                     <input type="text"/></div>
-					<br></br>
+					</div>
 					
-                    <div class="tabbable">
+                    <div class="display_box tabbable">
                         <ul class="nav nav-tabs">
                             <li class="active">
                                 <a href="#english_story" data-toggle="tab">Story</a>
@@ -59,7 +62,7 @@
                     </div>
                 </div>
                 <div class="span6">
-                    <div class="tabbable">
+                    <div class="display_box tabbable">
                         <ul class="nav nav-tabs">
                             <li class="active">
                                 <a href="#english_description" data-toggle="tab">Description</a>
@@ -80,7 +83,11 @@
                                 </p>
                             </div>
                         </div>
-                    </div><%= image_tag @chapter.main_image.url(:main) %>
+						
+                    </div>
+					<div class= "display_box">
+					    <%= image_tag @chapter.main_image.url(:main) %>
+					</div>	
                 </div>
             </div>
         </div>
