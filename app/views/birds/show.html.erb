@@ -5,9 +5,9 @@
         <title></title>
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container">
             <%= render 'welcome/heading' %>
-            <div class="row-fluid">
+            <div class="row">
                 <div class="span6">
                     <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
                         <%= @bird.common_name %>
@@ -19,12 +19,9 @@
                     </p>
                     <p>Chinese name: <%= @bird.chinese_name %></p>
                     <p>Tibetan name: <%= @bird.tibetan_name %></p>
-                    <p>
-                        <%= image_tag @bird.primary_image.url(:main) %>
-                    </p>
-                    <p>
-                        <audio src="%3C%=%20@bird.song.url%20%%3E" controls=""></audio>
-                    </p>
+					<p><%= link_to @bird.chapter.name, @bird.chapter %></p>
+                    <p><%= image_tag @bird.primary_image.url(:main) %></p>
+                    <p><audio src="%3C%=%20@bird.song.url%20%%3E" controls=""></audio></p>
                 </div>
                 <div class="span6">
 
@@ -40,9 +37,7 @@
 					<p>
 					    <%= image_tag @bird.range_map.url(:main) %>
 					</p>	
-					<p>
-                        <%= link_to @bird.chapter.name, @bird.chapter %>
-                    </p>
+
                 </div>
             </div>
             <!--<ul class="pager">
