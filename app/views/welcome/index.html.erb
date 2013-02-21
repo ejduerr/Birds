@@ -1,43 +1,47 @@
-<div class="container">
+<div class="container-fluid">
   <%= render 'welcome/heading' %>
- 
-  <div class="row">
-    <div class="span12">
-      <div style="padding: 0 150px;">
-        <ul class="bxslider">
-          <% Banner.all.each do |banner| %>
-            <li><%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %></li>
-          <% end %>
-        </ul>
+  <body> 
+    <div class="row-fluid">
+      <div class="span12">
+        <div style="padding: 0 150px;">
+          <ul class="bxslider">
+            <% Banner.all.each do |banner| %>
+              <li><%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %></li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
+     
+    <div class="span12 offset2">
+      <p>Jodi's text here</p> 
+      <%= image_tag("/system/birds/Shangrila_map.jpg", :size => '675x675')%>
+    </div>
 
-
-  <div class="row">
-    <% Chapter.all.each do |chapter| %>
-      <div class="span2">
-        <%= render "welcome_chapter_image", chapter: chapter %>
-      </div>
-    <% end %>
-  </div>
-
-
-  <br />  <br />
-  <div class="span12 offset2">
-    <p>Jodi's text here</p>
-	 <br />  <br />
-	 <br />  <br />
-    <%= image_tag("/system/birds/Shangrila_map.jpg", :size => '675x675')%>
-    <% birds = Bird.all.shuffle %>
-  </div>
-  
-  <% birds[0...12].each_slice(4) do |bird_row| %>
-    <div class="row">
-      <div class="span2">&nbsp;</div>
-      <% bird_row.each do |bird| %>
-        <div class="span2"><%=link_to image_tag(bird.primary_image.url(:thumb), id: bird.id), bird %></div>
+    <!--<div class="row">
+      <% Chapter.all.each do |chapter| %>
+        <div class="span2">
+          <%= render "welcome_chapter_image", chapter: chapter %>
+        </div>
       <% end %>
     </div>
-  <% end %>
+
+     <div class="span12 offset2">
+      <p>Jodi's text here</p>
+  	 <br />  <br />
+  	 <br />  <br />
+      <%= image_tag("/system/birds/Shangrila_map.jpg", :size => '675x675')%>
+      <% birds = Bird.all.shuffle %>
+    </div>
+    
+    <% birds[0...12].each_slice(4) do |bird_row| %>
+      <div class="row">
+        <div class="span2">&nbsp;</div>
+        <% bird_row.each do |bird| %>
+          <div class="span2"><%=link_to image_tag(bird.primary_image.url(:thumb), id: bird.id), bird %></div>
+        <% end %>
+      </div>
+    <% end %>
+    -->
+  </body> 
 </div>

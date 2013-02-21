@@ -1,59 +1,58 @@
-<html>
-    <head>
-        <meta name="generator"
-        content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
-        <title></title>
-    </head>
-    <body>
-        <div class="container">
-            <%= render 'welcome/heading' %>
-            <div class="row">
-                <div class="span12">
+<div class="container-fluid">
+    <%= render 'welcome/heading' %>
+    <div class="row-fluid">
+        <div class="span10 offset1">
+            <div class="display_box">    
                 <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
-					<%= link_to @bird.chapter.name, @bird.chapter %>
+        			<%= link_to @bird.chapter.name, @bird.chapter %>
                 </h4>
                 <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
                     <%= link_to @bird.chapter.chinese_name, @bird.chapter %>
                 </h4>	
+            </div>    
+        </div>
+    </div> 				
+    <div class="row-fluid">
+        <div class="span5 offset1">
+            <div class="display_box">
+                <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
+                    <%= @bird.common_name %>
+                </h4>
+                <div class="science_name">
+                    <p><i><%= @bird.scientific_name %></i></p>
                 </div>
-            </div> 				
-            <div class="row">
-                <div class="span6">
-                    <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
-                        <%= @bird.common_name %>
-                    </h4>
-                    <p>
-                        <i>
-                            <%= @bird.scientific_name %>
-                        </i>
-                    </p>
+                <div class="multi_names">    
                     <p>Chinese name: <%= @bird.chinese_name %></p>
                     <p>Tibetan name: <%= @bird.tibetan_name %></p>
-					<p><%= link_to @bird.chapter.name, @bird.chapter %></p>
-                    <p><%= image_tag @bird.primary_image.url(:main) %></p>
-                    <p><audio src="%3C%=%20@bird.song.url%20%%3E" controls=""></audio></p>
-                </div>
-                <div class="span6">
-
-                    <p><%= image_tag @bird.secondary_image.url(:main), style: 'float: right; margin: 5px;' %>
-                    <%= @bird.english_description %></p>
-                    <p>
-                        <%= @bird.chinese_description %>
-                    </p>
-                    <p>Size: <%= @bird.size %> cm</p>
-					
-                    Seasons:<p><% if @bird.summer %><%= image_tag "summer.png" %><% end %><% if @bird.fall %><%= image_tag "fall.png" %><% end %><% if @bird.winter %><%= image_tag "winter.png" %><% end %><% if @bird.spring %><%= image_tag "spring.png" %><% end %>
-                    </p>
-					<p>
-					    <%= image_tag @bird.range_map.url(:main) %>
-					</p>	
-
-                </div>
-            </div>
-            <!--<ul class="pager">
-                <li><a href="#">Previous</a></li>
-                <li><a href="#">Next</a></li>
-        </ul> -->
+                </div>    
+                <p><%= image_tag @bird.primary_image.url(:main) %></p>
+                <p><audio src="%3C%=%20@bird.song.url%20%%3E" controls=""></audio></p>
+            </div>    
         </div>
-    </body>
-</html>
+        <div class="span5">
+            <div class="display_box">
+
+                <div class="second_image">
+                    <%= image_tag @bird.secondary_image.url(:main), style: 'float: right; margin: 5px;' %>
+                </div>    
+                <div class="bird_text">
+                    <p><%= @bird.english_description %></p>
+                    <p><%= @bird.chinese_description %></p>
+                </div>
+                <div class="seasons">
+                    <strong>Seasons:</strong>
+                    <% if @bird.summer %><%= image_tag "summer.png" %><% end %>
+                    <% if @bird.fall %><%= image_tag "fall.png" %><% end %>
+                    <% if @bird.winter %><%= image_tag "winter.png" %><% end %>
+                    <% if @bird.spring %><%= image_tag "spring.png" %><% end %> &nbsp &nbsp &nbsp
+                    <strong>Size:</strong> <%= @bird.size %> cm
+                </div>
+                
+    			<div class="map">
+    			    <%= image_tag @bird.range_map.url(:main) %>
+    			</div>	
+            </div>
+        </div>
+    </div>
+
+</div>
