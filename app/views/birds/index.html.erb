@@ -1,25 +1,25 @@
-<div class="container_12">
-    <div class="grid_12">
-	    <%= render 'search' %>
-	</div>
-	
-	<% @birds.each do |bird| %>
-		<div class="grid_4">
-			<%= link_to image_tag(bird.primary_image.url(:tiny)), bird %>
-		</div>
-		
-		<div class="grid_4">
-			<%= bird.common_name %>
-			<br />
-			<%= bird.scientific_name %>
-		</div>
-		
-		<div class="grid_4">
-			<%= bird.chinese_name %>
-			<br />
-			<%= bird.tibetan_name %>
-		</div>
-		
-		<div class="clear"></div>
-	<% end %>
+<div class="container">
+  <%= render 'welcome/heading' %>
+
+  <% @birds.each do |bird| %>
+    <div class="row">
+      <div class="underlined_search">
+        <div class="span4">
+          <%= link_to image_tag(bird.primary_image.url(:tiny)), bird %>
+        </div>
+
+        <div class="span4">
+          <%= bird.common_name %>
+          <br />
+          <%= bird.scientific_name %>
+        </div>
+
+        <div class="span4">
+          <%= bird.chinese_name %>
+          <br />
+          <%= bird.tibetan_name %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
