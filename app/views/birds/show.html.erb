@@ -3,10 +3,10 @@
     <div class="row">
         <div class="span12">
             <div class="display_box">    
-                <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
+                <h4>
         			<%= link_to @bird.chapter.name, @bird.chapter %>
                 </h4>
-                <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
+                <h4>
                     <%= link_to @bird.chapter.chinese_name, @bird.chapter %>
                 </h4>	
             </div>    
@@ -15,7 +15,7 @@
     <div class="row">
         <div class="span6">
             <div class="display_box">
-                <h4 style="font-family: &#39;Libre Baskerville&#39;, serif;">
+                <h4>
                     <%= @bird.common_name %>
                 </h4>
                 <div class="science_name">
@@ -24,9 +24,13 @@
                 <div class="multi_names">    
                     <p>Chinese name: <%= @bird.chinese_name %></p>
                     <p>Tibetan name: <%= @bird.tibetan_name %></p>
+                </div>
+                <div class="main_bird">    
+                    <p><%= image_tag @bird.primary_image.url(:main) %></p>
+                </div>
+                <div class="audio">                    
+                    <p><audio src="%3C%=%20@bird.song.url%20%%3E" controls=""></audio></p>
                 </div>    
-                <p><%= image_tag @bird.primary_image.url(:main) %></p>
-                <p><audio src="%3C%=%20@bird.song.url%20%%3E" controls=""></audio></p>
             </div>    
         </div>
         <div class="span6">
