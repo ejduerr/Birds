@@ -15,7 +15,7 @@
         </ul>
       </div>
       <%= form_tag birds_path, :method => :get, :class =>"navbar-form pull-right" do %>
-        <input type="text" class="search-query" placeholder="Search" name="search"/>
+        <input type="text" class="search-query" placeholder="Search" name="search" value="<%= params[:search] %>"/>
         <button type="submit" class="btn">Submit</button>
       <% end %>
     </div>
