@@ -76,7 +76,7 @@ class Admin::BirdsController < ApplicationController
     @bird.destroy
 
     respond_to do |format|
-      format.html { redirect_to birds_url }
+      format.html { redirect_to [:admin, @bird] }
       format.json { head :no_content }
     end
   end

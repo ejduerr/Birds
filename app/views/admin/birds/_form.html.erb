@@ -1,4 +1,4 @@
-<%= simple_form_for(@bird, :html => { :multipart => true }) do |f| %>
+<%= simple_form_for([:admin, @bird], :html => { :multipart => true }) do |f| %>
   <% if @bird.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@bird.errors.count, "error") %> prohibited this bird from being saved:</h2>

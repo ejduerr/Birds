@@ -1,8 +1,8 @@
 Birds::Application.routes.draw do
   resources :banners
 
-  resources :chapters
-  resources :birds
+  resources :chapters#, only: [:index, :show]
+  resources :birds#, only: [:index, :show]
   
   namespace :admin do
 	  resources :chapters

@@ -1,45 +1,38 @@
-<h1>Listing birds</h1>
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <h1>Listing birds</h1>
 
-<table>
-  <tr>
-    <th>Image</th>
-    <th>Common name</th>
-    <th>Scientific name</th>
-    <th>Chinese name</th>
-    <th>Tibetan name</th>
-    <th>Size</th>
-    <th>Summer</th>
-    <th>Fall</th>
-    <th>Winter</th>
-    <th>Spring</th>
-    <th>English description</th>
-    <th>Chinese description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+      <div class="form-actions">
+        <%= link_to 'New Bird', new_admin_bird_path, class: 'btn btn-inverse' %>
+      </div>
 
-<% @birds.each do |bird| %>
-  <tr>
-    <td><%= image_tag bird.primary_image.url(:tiny) %></td>
-    <td><%= bird.common_name %></td>
-    <td><%= bird.scientific_name %></td>
-    <td><%= bird.chinese_name %></td>
-    <td><%= bird.tibetan_name %></td>
-    <td><%= bird.size %></td>
-    <td><%= bird.summer %></td>
-    <td><%= bird.fall %></td>
-    <td><%= bird.winter %></td>
-    <td><%= bird.spring %></td>
-    <td><%= bird.english_description %></td>
-    <td><%= bird.chinese_description %></td>
-    <td><%= link_to 'Show', bird %></td>
-    <td><%= link_to 'Edit', edit_bird_path(bird) %></td>
-    <td><%= link_to 'Destroy', bird, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+      <table class="table">
+        <tr>
+          <th>Image</th>
+          <th>Common name</th>
+          <th>Scientific name</th>
+          <th>Size</th>
+          <th>English description</th>
+          <th colspan="3">Actions</th>
+        </tr>
 
-<br />
+      <% @birds.each do |bird| %>
+        <tr>
+          <td><%= image_tag bird.primary_image.url(:tiny) %></td>
+          <td><%= link_to bird.common_name, bird %></td>
+          <td><%= bird.scientific_name %></td>
+          <td><%= bird.size %></td>
+          <td><%= bird.english_description.truncate(10) %></td>
+          <td><%= link_to 'Edit', edit_admin_bird_path(bird), class: 'btn btn-primary' %></td>
+          <td><%= link_to 'Destroy', [:admin, bird], class: 'btn btn-danger', confirm: 'Are you sure?', method: :delete %></td>
+        </tr>
+      <% end %>
+      </table>
 
-<%= link_to 'New Bird', new_bird_path %>
+      <div class="form-actions">
+        <%= link_to 'New Bird', new_admin_bird_path, class: 'btn btn-inverse' %>
+      </div>
+    </div>
+  </div>
+</div>
