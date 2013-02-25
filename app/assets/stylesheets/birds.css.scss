@@ -29,7 +29,7 @@
   color: #151F2D; /*darkest navy*/
   width: 375px;
   margin-left: 50px;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .chapter_bird_thumb_container ul {
@@ -80,7 +80,7 @@ body {
   text-shadow: 0px 0px 5px #444;
 }  
 
-.second_image {
+.second_image img {
   margin-left: 20px;
   margin-bottom: 5px;
 }
@@ -101,7 +101,7 @@ body {
   text-align: center;
 }
 
-.main_bird img, .map img, .audio audio, .shangrila_map img {
+.main_bird img, .map img, .audio audio, .shangrila_map img, .chapter_pic img {
   margin: auto;
   display: block;
 }
