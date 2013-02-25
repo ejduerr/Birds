@@ -1,23 +1,23 @@
 <div class="row">
-	<div class="span12">
-		<div class= "title">
-			 <h1><%= link_to "Birds of Shangrila", root_url %></h1>
-		</div>	 
-		<div class="navbar">
-			<div class="navbar-inner">
-				    <ul class="nav">
-                        <% Chapter.all.each do |chapter| %>
-                        	<li>
-	                        	<%= link_to image_tag(chapter.main_image.url(:thumb)), chapter %>
-	                            <%= chapter.name %>
-                        	</li>
-                        <% end %>
-					</ul>						
-			</div>	
-			<form class="navbar-form pull-right">
-				<input type="text" class="search-query" placeholder="Search" /> 
-				<button type="submit" class="btn">Submit</button
-			</form>
-		</div>
-	</div>
-</div>	
+  <div class="span12">
+    <div class= "title">
+       <h1><%= link_to "Birds of Shangrila", root_url %></h1>
+    </div>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <% Chapter.all.each do |chapter| %>
+            <li>
+              <%= link_to image_tag(chapter.main_image.url(:thumb)), chapter %>
+              <%= chapter.name %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <%= form_tag birds_path, :method => :get, :class =>"navbar-form pull-right" do %>
+        <input type="text" class="search-query" placeholder="Search" name="search"/>
+        <button type="submit" class="btn">Submit</button>
+      <% end %>
+    </div>
+  </div>
+</div>
