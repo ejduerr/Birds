@@ -1,7 +1,6 @@
-<div class="container-fluid">
+<div class="container">
   <%= render 'welcome/heading' %>
-  <body> 
-    <div class="row-fluid">
+    <div class="row">
       <div class="span12">
         <div style="padding: 0 150px;">
           <ul class="bxslider">
@@ -12,11 +11,12 @@
         </div>
       </div>
     </div>
-     
-    <div class="span12 offset2">
-      <p>Jodi's text here</p> 
-      <%= image_tag("/system/birds/Shangrila_map.jpg", :size => '675x675')%>
-    </div>
+    <div class="row">
+      <div class="span12">
+        <p>Jodi's text here</p> 
+        <%= image_tag("/system/birds/Shangrila_map.jpg", :size => '675x675')%>
+      </div>
+    </div>  
 
     <!--<div class="row">
       <% Chapter.all.each do |chapter| %>
@@ -43,5 +43,4 @@
       </div>
     <% end %>
     -->
-  </body> 
 </div>

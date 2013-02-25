@@ -1,4 +1,4 @@
-<div class="row-fluid">
+<div class="row">
 	<div class="span12">
 		<div class= "title">
 			 <h1 style="font-family: &#39;Libre Baskerville&#39;, serif;"><%= link_to "Birds of Shangrila", root_url %></h1>
@@ -6,21 +6,16 @@
 		<div class="navbar">
 			<div class="navbar-inner">
 				    <ul class="nav">
-					    <div class="row-fluid">
                             <% Chapter.all.each do |chapter| %>
-                                <div class="span2">
                                     	<%= link_to image_tag(chapter.main_image.url(:thumb)), chapter %>
 										<br></br>
 	                                    <%= chapter.name %>
-                                </div>
                             <% end %>
-                        </div>
 					</ul>						
-				</div>	
-				<form class="navbar-form pull-right">
-				<input type="text" class="search-query" placeholder="Search" /> 
-				<button type="submit" class="btn">Submit</button></form>
-			</div>
+			</div>	
+			<form class="navbar-form pull-right">
+			<input type="text" class="search-query" placeholder="Search" /> 
+			<button type="submit" class="btn">Submit</button></form>
 		</div>
 	</div>
-</div>
+</div>	

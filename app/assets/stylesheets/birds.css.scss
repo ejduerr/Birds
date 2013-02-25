@@ -72,7 +72,7 @@ body {
 .display_box {
   background: #CED2D7;
   border-radius: 10px;
-
+  padding: 5px;
   box-shadow: 0px 0px 5px #bbb;
   margin:10px 10px;
 }
@@ -88,18 +88,8 @@ body {
   text-shadow: 0px 0px 5px #444;
 }  
 
-.span2 {
-  width: 90px;
-  margin: 0px 0px 0px 0px;
-}
-
-.nav {
-  padding: 5px;
-  margin: 5px;
-}
-
 .map {
-  padding-left: 90px;
+  padding-left: 80px;
   padding-bottom: 40px;
   padding-top: 40px;
 }
