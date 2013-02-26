@@ -81,8 +81,9 @@ body {
 }  
 
 .second_image img {
-  margin-left: 20px;
+  margin-left: 10px;
   margin-bottom: 5px;
+  float: right;
 }
 
 .seasons {
@@ -104,4 +105,21 @@ body {
 .main_bird img, .map img, .audio audio, .shangrila_map img, .chapter_pic img {
   margin: auto;
   display: block;
+}
+
+.ch_name_caption {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.75);
+  color: #eee;
+  height: 40%;
+  padding: 2px;
+}
+
+.ch_container {
+  position: relative;
+  float: left;
+  margin: 5px;
 }
