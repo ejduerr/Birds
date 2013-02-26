@@ -17,13 +17,19 @@
             <div class="row">
                 <div class="span6">
 					<div class="display_box">
-                    <div class="chapter_bird_thumb_container">
-                    <b>Bird List</b>
-                    <ul>
-                        <% @chapter.birds.each do |bird| %><%= render "chapter_bird_thumb", bird: bird %><% end %>
-                    </ul>Quick Search 
-                    <input type="text"/></div>
-					</div>
+                        <div class="chapter_bird_thumb_container">
+                            <div class="header_text">
+                                <b>Bird List</b>
+                            </div>    
+                            <ul>
+                                <% @chapter.birds.each do |bird| %><%= render "chapter_bird_thumb", bird: bird %><% end %>
+                            </ul>
+                            <div class="find">
+                                Find 
+                                <input type="text"/>
+        					</div>
+                        </div>
+                    </div>    
 					
                     <div class="display_box tabbable">
                         <ul class="nav nav-tabs">

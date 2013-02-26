@@ -11,7 +11,7 @@
 		<div class="ch_container">
 		  <%= link_to image_tag(chapter.main_image.url(:thumb)), chapter %>
 		  <div class="ch_name_caption">
-		    <%= chapter.name %>
+		    <%= link_to chapter.name, chapter %>
 		  </div>    
 		</div>
 	<% end %>

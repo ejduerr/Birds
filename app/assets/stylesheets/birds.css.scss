@@ -10,7 +10,7 @@
 
 .chapter_bird_thumb_frame {
   color: #445156;
-  background-color: #CED2D7; /*bird buttons*/
+  background-color: #C9D5DF; /*bird buttons*/
   list-style: none;
   margin-bottom: 1px;
   height: 45px;
@@ -25,11 +25,13 @@
 }
 
 .chapter_bird_thumb_container {
-  background-color: #3A485C; /*frame around bird buttons*/
+  background-color: #273942; /*frame around bird buttons*/
   color: #151F2D; /*darkest navy*/
   width: 375px;
   margin-left: 50px;
   border-radius: 2px;
+  margin: auto;
+  display: block;
 }
 
 .chapter_bird_thumb_container ul {
@@ -44,7 +46,13 @@
 
 .container {
   font-family: 'Domine' !important;
-  background: #CED2D7; 
+  background: #C9D5DF; 
+  border: 1px;
+}
+
+body {
+  background: #EDF0F1;
+  color: #14191B;
 }
 
 a {
@@ -54,23 +62,19 @@ a {
 
 a:hover,
 a:focus {
-  color: #6B6352;
+  color: #858C90;
 }  
 
-body {
-  background: #273942;
-}
-
 .display_box {
-  background: #CED2D7;
+  background: #C9D5DF;
   border-radius: 10px;
   padding: 5px;
-  box-shadow: 0px 0px 5px #bbb;
   margin:10px 10px;
+  border: none;
 }
 
 .title {
-  background: #3A485C;
+  background: #273942;
   color: #eee;
   padding: 50px;
 }  
@@ -88,6 +92,7 @@ body {
 
 .seasons {
   padding-left: 50px;
+  padding-top: 20px;
 }
 
 .multi_names {
@@ -113,7 +118,7 @@ body {
   left: 0;
   right: 0;
   background: rgba(0,0,0,0.75);
-  color: #eee;
+  color: white;
   height: 40%;
   padding: 2px;
 }
@@ -122,4 +127,49 @@ body {
   position: relative;
   float: left;
   margin: 5px;
+}
+
+.underlined_search {
+  padding: 15px 5px 5px 10px;
+}
+
+.map img {
+  padding: 20px;
+}
+
+
+input.search-query {
+  border-radius: 8px;
+}  
+
+.intro_text {
+  margin: auto;
+  display: block;
+}
+
+.header_text {
+  padding-left-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  float: left;
+  margin: 20px;
+  color: #C9D5DF;
+  font-size: 12pt;
+}
+
+.find {
+  color: #C9D5DF;
+  padding-left: 58px;
+}
+
+.block_two {
+  margin-top: 60px;
+}
+
+.ch_head {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }

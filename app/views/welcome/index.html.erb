@@ -3,23 +3,31 @@
     <div class="row">
       <div class="span12">
         <div style="padding: 0 150px;">
-          <ul class="bxslider">
-            <% Banner.all.each do |banner| %>
-              <li><%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %></li>
-            <% end %>
-          </ul>
+
+          <div id="myCarousel" class="carousel_slide">
+            <div class="carousel-inner">
+              <div class="active item">              
+                <% Banner.all.each do |banner| %>
+                <li><%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %></li>
+                <% end %>
+              </div>  
+            </div>
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
+      <div class="span 8 intro text">
+        <p>Welcome to the Birds of Shangrila Website! Here, you can find pictures, bird songs and descriptions of the most common birds in Shangrila, Yunnan, China. In addition, you will find several traditional Tibetan and Chinese folktales, songs, and anecdotes about the birds of this region.</p>
+      </div>  
       <div class="span12">
-        <p>Jodi's text here</p>
         <div class="shangrila_map"> 
           <%= image_tag("/system/birds/Shangrila_map.jpg", :size => '675x675')%>
         </div>  
       </div>
     </div>  
-
+  </div>
+  
     <!--<div class="row">
       <% Chapter.all.each do |chapter| %>
         <div class="span2">

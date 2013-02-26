@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.bxslider').bxSlider({auto: true});
+  $('.carousel').carousel({auto: true});
   $( ".tabs" ).tabs();
   
 	var atoz = $('#atoz');
