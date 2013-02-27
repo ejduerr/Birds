@@ -97,10 +97,11 @@ a:focus {
 
 .multi_names {
   padding-left: 30px;
+  font-size: 15pt
 }
 
 .science_name {
-  padding-left: 10px;
+  padding-left: 30px;
 }
 
 .chapter_pic {
@@ -118,7 +119,7 @@ a:focus {
   left: 0;
   right: 0;
   background: rgba(0,0,0,0.75);
-  color: white;
+  color: #eee;
   height: 40%;
   padding: 2px;
 }
@@ -172,4 +173,9 @@ input.search-query {
   padding-bottom: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.seasons img {
+  background: #eee;
+
 }

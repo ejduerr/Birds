@@ -22,9 +22,10 @@
                     <p><i><%= @bird.scientific_name %></i></p>
                 </div>
                 <div class="multi_names">    
-                    <p>Chinese name: <%= @bird.chinese_name %></p>
-                    <p>Tibetan name: <%= @bird.tibetan_name %></p>
+                    <div class="chinese_name"><%= @bird.chinese_name %></div>
+                    <div class="tibetan_name"><%= @bird.tibetan_name %></div>
                 </div>
+                <br></br>
                 <div class="main_bird">    
                     <p><%= image_tag @bird.primary_image.url(:main) %></p>
                 </div>

@@ -4,16 +4,31 @@
       <div class="span12">
         <div style="padding: 0 150px;">
 
-          <div id="myCarousel" class="carousel_slide">
+          <div id="myCarousel" class="carousel slide"><p></p>
             <div class="carousel-inner">
-              <div class="active item">              
+              <div class="active item">  
                 <% Banner.all.each do |banner| %>
                 <li><%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %></li>
-                <% end %>
+                <% end %>                
+                <!--<%= image_tag("C:/Sites/Birds/app/assets/images/banner/fantail.jpg")%>
+                <div class="carousel-caption">
+                  <p>fantail</p>
+                </div>              
+              <div class="item">  
+                <%= image_tag("C:/Sites/Birds/app/assets/images/banner/pkeet.jpg")%>
+                <div class="carousel-caption">
+                  <p>parakeet</p>
+                </div>
               </div>  
+              <div class="item">  
+                <%= image_tag("C:/Sites/Birds/app/assets/images/banner/tit.jpg")%>
+                <div class="carousel-caption">
+                  <p>tit</p>
+                </div>
+              </div> -->                
             </div>
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
           </div>
         </div>
       </div>
@@ -23,34 +38,17 @@
       <div class="span12">
         <div class="shangrila_map"> 
           <%= image_tag("/system/birds/Shangrila_map.jpg", :size => '675x675')%>
-        </div>  
+        </div> 
       </div>
     </div>  
   </div>
-  
-    <!--<div class="row">
-      <% Chapter.all.each do |chapter| %>
-        <div class="span2">
-          <%= render "welcome_chapter_image", chapter: chapter %>
-        </div>
-      <% end %>
-    </div>
-
-     <div class="span12 offset2">
-      <p>Jodi's text here</p>
-  	 <br />  <br />
-  	 <br />  <br />
-      <%= image_tag("/system/birds/Shangrila_map.jpg", :size => '675x675')%>
-      <% birds = Bird.all.shuffle %>
-    </div>
-    
-    <% birds[0...12].each_slice(4) do |bird_row| %>
-      <div class="row">
-        <div class="span2">&nbsp;</div>
-        <% bird_row.each do |bird| %>
-          <div class="span2"><%=link_to image_tag(bird.primary_image.url(:thumb), id: bird.id), bird %></div>
-        <% end %>
-      </div>
-    <% end %>
-    -->
 </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+</script>
+

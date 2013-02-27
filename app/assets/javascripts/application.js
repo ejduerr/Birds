@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+//= require carousel
+//= require jquery-1.7.2.min
+//= require birds
