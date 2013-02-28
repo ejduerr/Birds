@@ -50,6 +50,17 @@
   border: 1px;
 }
 
+.ch_name_caption a{
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.75);
+  color: #eee;
+  height: 40%;
+  padding: 2px;
+}
+
 body {
   background: #EDF0F1;
   color: #14191B;
@@ -113,17 +124,6 @@ a:focus {
   display: block;
 }
 
-.ch_name_caption {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.75);
-  color: #eee;
-  height: 40%;
-  padding: 2px;
-}
-
 .ch_container {
   position: relative;
   float: left;
@@ -178,4 +178,9 @@ input.search-query {
 .seasons img {
   background: #eee;
 
+}
+
+.intro_text {
+  position: relative;
+  float: center;
 }
