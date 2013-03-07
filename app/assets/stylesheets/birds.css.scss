@@ -4,10 +4,6 @@
 @import url(http://fonts.googleapis.com/css?family=Domine);
 @import "bootstrap";
 
-.bxslider li {
-  margin-left: 0px;
-}
-
 .chapter_bird_thumb_frame {
   color: #445156;
   background-color: #C9D5DF; /*bird buttons*/
@@ -84,11 +80,19 @@ a:focus {
   border: none;
 }
 
-.title {
+.site_heading {
   background: #273942;
   color: #eee;
-  padding: 50px;
-}  
+}
+
+.title {
+  padding-top: 50px;
+  padding-left: 50px;
+  }
+
+.search_bar {
+  padding-right: 20px;
+  }
 
 .title h1 a {
   color: #eee;
@@ -138,10 +142,6 @@ a:focus {
   padding: 20px;
 }
 
-
-input.search-query {
-  border-radius: 8px;
-}  
 
 .intro_text {
   margin: auto;

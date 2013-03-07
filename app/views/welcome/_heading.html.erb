@@ -1,27 +1,37 @@
 <div class="row">
-  <div class="span12">
-    <div class= "title">
-       <h1><%= link_to "Birds of Shangrila", root_url %></h1>
+  <div class="span12 site_heading">
+    <div class="row">
+      <div class="span12">
+        <div class="title">
+           <h1><%= link_to "Birds of Shangrila", root_url %></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <div class="search_bar">
+          <%= form_tag birds_path, :method => :get, :class => 'pull-right form-search' do %>
+            <div class="input-append">
+              <input type="text" class="search-query" placeholder="Search" name="search" value="<%= params[:search] %>"/>
+              <button type="submit" class="btn">Submit</button>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
 <div class="row">
   <div class="span12">
-	<% Chapter.all.each do |chapter| %>
-		<div class="ch_container">
-		  <%= link_to image_tag(chapter.main_image.url(:thumb)), chapter %>
-		  <div class="ch_name_caption">
-		    <%= link_to chapter.name, chapter %>
-		  </div>    
-		</div>
-	<% end %>
-  </div>
-</div>
-<div class="row">
-  <div class="span12">
-      <%= form_tag birds_path, :method => :get, :class =>"navbar-form pull-right" do %>
-        <input type="text" class="search-query" placeholder="Search" name="search" value="<%= params[:search] %>"/>
-        <button type="submit" class="btn">Submit</button>
-      <% end %>
+  <% Chapter.all.each do |chapter| %>
+    <div class="ch_container">
+      <%= link_to image_tag(chapter.main_image.url(:thumb)), chapter %>
+      <div class="ch_name_caption">
+        <%= link_to chapter.name, chapter %>
+      </div>
+    </div>
+  <% end %>
   </div>
 </div>
