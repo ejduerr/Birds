@@ -4,31 +4,26 @@
       <div class="span12">
         <div style="padding: 0 150px;">
 
-          <div id="myCarousel" class="carousel slide"><p></p>
+          <div id="myCarousel" class="carousel slide">
+           <ol class="carousel-indicators">
+              <% Banner.all.each_with_index do |banner, index| %>
+                <li data-target="#myCarousel" data-slide-to="<%= index %>" class="<%= index == 0 ? "active" : "" %>"></li>
+              <% end %>
+            </ol>
             <div class="carousel-inner">
-              <div class="active item">  
-                <% Banner.all.each do |banner| %>
-                <li><%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %></li>
-                <% end %>                
-                <!--<%= image_tag("C:/Sites/Birds/app/assets/images/banner/fantail.jpg")%>
-                <div class="carousel-caption">
-                  <p>fantail</p>
-                </div>              
-              <div class="item">  
-                <%= image_tag("C:/Sites/Birds/app/assets/images/banner/pkeet.jpg")%>
-                <div class="carousel-caption">
-                  <p>parakeet</p>
+              <% Banner.all.each_with_index do |banner, index| %>
+                <% if index == 0 %>
+                  <div class="active item">
+                <% else %>
+                  <div class="item">
+                <% end %>
+                  <%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %>
                 </div>
-              </div>  
-              <div class="item">  
-                <%= image_tag("C:/Sites/Birds/app/assets/images/banner/tit.jpg")%>
-                <div class="carousel-caption">
-                  <p>tit</p>
-                </div>
-              </div> -->                
+              <% end %>
             </div>
-              <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-              <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
           </div>
         </div>
       </div>
@@ -45,12 +40,3 @@
     </div>  
   </div>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
-<script src="js/bootstrap.min.js"></script>
-<script>
-  $(document).ready(function(){
-    $('.carousel').carousel();
-  });
-</script>
-
