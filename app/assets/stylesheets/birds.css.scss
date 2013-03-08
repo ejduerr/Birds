@@ -34,10 +34,12 @@
 }
 
 .chapter_bird_thumb_container {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.7);
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 1px #000;
+
+  text-shadow: 0 0 5px #333;
 }
 
 .chapter_bird_thumb_container ul {
@@ -48,6 +50,7 @@
 
 .header_text {
   color: #eee;
+  margin-bottom: 5px;
 }
 
 .find {
@@ -233,6 +236,7 @@ a:focus {
   padding: 10px;
   margin-left: 20px;
   margin-top: 20px;
+  text-shadow: 0 0 5px #333;
 }
 
 
