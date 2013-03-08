@@ -24,14 +24,16 @@
 <section class="site_menu">
   <div class="row">
     <div class="span12">
-    <% Chapter.all.each do |chapter| %>
-      <div class="ch_container">
-        <%= link_to image_tag(chapter.main_image.url(:thumb)), chapter %>
-        <div class="ch_name_caption">
-          <%= link_to chapter.name, chapter %>
-        </div>
+      <div class="ch_list">
+        <% Chapter.all.each do |chapter| %>
+          <div class="ch_container">
+            <%= link_to image_tag(chapter.main_image.url(:thumb)), chapter %>
+            <div class="ch_name_caption">
+              <%= link_to chapter.name, chapter %>
+            </div>
+          </div>
+        <% end %>
       </div>
-    <% end %>
     </div>
   </div>
 </section>

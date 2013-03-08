@@ -53,15 +53,41 @@
   right: 0;
   background: rgba(0,0,0,0.75);
   color: #eee;
-  height: 40%;
-  padding: 2px;
+  height: 30%;
+  padding: 5px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
 }
+
+.ch_name_caption a:hover {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.ch_list {
+ width: 940px;
+}
+.ch_container {
+  position: relative;
+  float: left;
+  margin: 0px;
+  width: 156px;
+}
+
+.ch_container img {
+  width: 156px;
+}
+
 
 .main_container {
   background: #ededdd;
   color: #14191B;
 }
 
+.welcome_body {
+  margin-top: 50px;
+}
 
 a {
   color: #14191B;
@@ -87,7 +113,7 @@ a:focus {
 }
 
 .site_menu {
-  background: #eee;
+  background: #000;
 }
 
 .container {
@@ -136,12 +162,6 @@ a:focus {
 .main_bird img, .map img, .audio audio, .shangrila_map img, .chapter_pic img {
   margin: auto;
   display: block;
-}
-
-.ch_container {
-  position: relative;
-  float: left;
-  margin: 5px;
 }
 
 .underlined_search {
