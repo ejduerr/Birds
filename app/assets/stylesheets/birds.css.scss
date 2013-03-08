@@ -57,10 +57,11 @@
   padding: 2px;
 }
 
-body {
-  background: #EDF0F1;
+.main_container {
+  background: #ededdd;
   color: #14191B;
 }
+
 
 a {
   color: #14191B;
@@ -84,6 +85,15 @@ a:focus {
   background: #273942;
   color: #eee;
 }
+
+.site_menu {
+  background: #eee;
+}
+
+.container {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+  }
+
 
 .title {
   padding-top: 50px;
