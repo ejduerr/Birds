@@ -177,21 +177,9 @@ a:focus {
 .main_bird img, .map img, .audio audio, .shangrila_map img, .chapter_pic img {
   margin: auto;
   display: block;
+  margin-top: 20px;
 }
 
-.underlined_search {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 20px 0px;
-}
-
-.search_image img {
-  margin-left: 20px;
-  box-shadow: 0px 0px 2px #000;
-}
-
-.search_odd {
-  background: rgba(255, 255, 255, 0.2);
-}
 
 .map img {
   padding: 20px;
@@ -223,11 +211,9 @@ a:focus {
   margin-top: 60px;
 }
 
-.ch_head {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.ch_head a {
+  font-size: 30px;
+  color: #333;
 }
 
 .seasons img {
@@ -238,4 +224,75 @@ a:focus {
 .intro_text {
   position: relative;
   float: center;
+}
+
+
+
+/* bird stat box ***********************/
+
+.bird_stats {
+  color: #ddd;
+  background: rgba(0,0,0,0.7);
+  box-shadow: 0 0 1px #000;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+
+.bird_stats dl
+{
+  width: 420px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.bird_stats dt
+{
+  clear: left;
+  float: left;
+  width: 130px;
+  margin: 0;
+  padding: 5px;
+  border-top: 1px dotted rgba(255,255,255,0.1);
+  font-weight: bold;
+}
+
+.bird_stats dd
+{
+  float: left;
+  width: 260px;
+  margin: 0;
+  padding: 5px;
+  border-top: 1px dotted rgba(255,255,255,0.1);
+}
+
+.bird_stats audio {
+  width: 100%;
+}
+
+.bird_stats h3 {
+  margin-top: 0
+}
+
+.clear {
+  clear:both;
+}
+
+
+
+/* search ******************************/
+
+.underlined_search {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 0px;
+}
+
+.search_image img {
+  margin-left: 20px;
+  box-shadow: 0px 0px 2px #000;
+}
+
+.search_odd {
+  background: rgba(255, 255, 255, 0.2);
 }
