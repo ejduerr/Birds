@@ -15,16 +15,18 @@
     <div class="display_box">
       <div class="chapter_bird_thumb_container">
         <div class="header_text">
-          <b>Bird List</b>
+          <b>Birds</b>
         </div>
 
         <ul>
           <% @chapter.birds.each do |bird| %><%= render "chapter_bird_thumb", bird: bird %><% end %>
         </ul>
 
-        <div class="find">
-          Find
-          <input type="text"/>
+        <div class="find form-search">
+          <div class="input-append">
+            <input type="text" class="search-query"/>
+            <button type="submit" class="btn">Find</button>
+          </div>
         </div>
       </div>
     </div>

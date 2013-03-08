@@ -8,11 +8,21 @@
 /* Chapter bird list ********************/
 
 .chapter_bird_thumb_frame {
-  color: #445156;
-  background-color: #C9D5DF; /*bird buttons*/
   list-style: none;
   margin-bottom: 1px;
   height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.chapter_bird_thumb_frame a {
+  color: #eee;
+}
+
+.chapter_bird_thumb_frame a:hover {
+  color: #eee;
+}
+.chapter_bird_thumb_frame:hover {
+ background: rgba(255, 255, 255, 0.2);
 }
 
 .chapter_bird_thumb_frame img {
@@ -24,23 +34,23 @@
 }
 
 .chapter_bird_thumb_container {
-  background-color: #273942; /*frame around bird buttons*/
-  color: #151F2D; /*darkest navy*/
-  width: 375px;
-  margin-left: 50px;
-  border-radius: 2px;
-  margin: auto;
-  display: block;
+  background: rgba(0,0,0,0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 1px #000;
 }
 
 .chapter_bird_thumb_container ul {
   height: 275px;
   overflow-y: auto;
-  margin-right: 10px;
-  color: #7E735B;
-  margin-left: 45px;
-  margin-top: 25px;
-  width: 290px;
+  margin-left: 0;
+}
+
+.header_text {
+  color: #eee;
+}
+
+.find {
 }
 
 
@@ -191,21 +201,6 @@ a:focus {
   display: block;
 }
 
-.header_text {
-  padding-left-top: 20px;
-  padding-left: 30px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  float: left;
-  margin: 20px;
-  color: #C9D5DF;
-  font-size: 12pt;
-}
-
-.find {
-  color: #C9D5DF;
-  padding-left: 58px;
-}
 
 .block_two {
   margin-top: 60px;
