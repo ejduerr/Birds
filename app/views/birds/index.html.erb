@@ -1,25 +1,23 @@
-<div class="container">
-  <%= render 'welcome/heading' %>
-
-  <% @birds.each do |bird| %>
+<% @birds.each do |bird| %>
+  <section class="underlined_search <%= cycle('search_even', 'search_odd') %>">
     <div class="row">
-      <div class="underlined_search">
-        <div class="span4">
+      <div class="span4">
+        <div class="search_image">
           <%= link_to image_tag(bird.primary_image.url(:tiny)), bird %>
         </div>
+      </div>
 
-        <div class="span4">
-          <strong><%= bird.common_name %></strong>
-          <br />
-          <em><%= bird.scientific_name %></em>
-        </div>
+      <div class="span4">
+        <strong><%= bird.common_name %></strong>
+        <br />
+        <em><%= bird.scientific_name %></em>
+      </div>
 
-        <div class="span4">
-          <%= bird.chinese_name %>
-          <br />
-          <%= bird.tibetan_name %>
-        </div>
+      <div class="span4">
+        <%= bird.chinese_name %>
+        <br />
+        <%= bird.tibetan_name %>
       </div>
     </div>
-  <% end %>
-</div>
+  </section>
+<% end %>

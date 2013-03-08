@@ -180,7 +180,17 @@ a:focus {
 }
 
 .underlined_search {
-  padding: 15px 5px 5px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 0px;
+}
+
+.search_image img {
+  margin-left: 20px;
+  box-shadow: 0px 0px 2px #000;
+}
+
+.search_odd {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .map img {
