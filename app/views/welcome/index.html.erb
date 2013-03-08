@@ -1,43 +1,39 @@
-<div class="container">
-  <%= render 'welcome/heading' %>
+<section class="welcome_body">
+  <div class="row">
+    <div class="span12">
+      <div style="padding: 0 150px;">
 
-  <section class="welcome_body">
-    <div class="row">
-      <div class="span12">
-        <div style="padding: 0 150px;">
-
-          <div id="myCarousel" class="carousel slide">
-            <ol class="carousel-indicators">
-              <% Banner.all.each_with_index do |banner, index| %>
-                <li data-target="#myCarousel" data-slide-to="<%= index %>" class="<%= index == 0 ? "active" : "" %>"></li>
-              <% end %>
-            </ol>
-            <div class="carousel-inner">
-              <% Banner.all.each_with_index do |banner, index| %>
-                <div class="<%= index == 0 ? "active" : ""%> item">
-                  <%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %>
-                  <div class="carousel-caption">
-                    <h4><%= banner.bird.common_name %></h4>
-                  </div>
+        <div id="myCarousel" class="carousel slide">
+          <ol class="carousel-indicators">
+            <% Banner.all.each_with_index do |banner, index| %>
+              <li data-target="#myCarousel" data-slide-to="<%= index %>" class="<%= index == 0 ? "active" : "" %>"></li>
+            <% end %>
+          </ol>
+          <div class="carousel-inner">
+            <% Banner.all.each_with_index do |banner, index| %>
+              <div class="<%= index == 0 ? "active" : ""%> item">
+                <%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %>
+                <div class="carousel-caption">
+                  <h4><%= banner.bird.common_name %></h4>
                 </div>
-              <% end %>
-            </div>
-
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+              </div>
+            <% end %>
           </div>
+
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="span8 intro_text">
-        <p>Welcome to the Birds of Shangrila Website! Here, you can find pictures, bird songs and descriptions of the most common birds in Shangrila, Yunnan, China. In addition, you will find several traditional Tibetan and Chinese folktales, songs, and anecdotes about the birds of this region.</p>
-      </div>
-      <div class="span12">
-        <div class="shangrila_map">
-          <%= image_tag("/system/birds/Shangrila_map.jpg", :size => '675x675')%>
-        </div>
+  </div>
+  <div class="row">
+    <div class="span8 intro_text">
+      <p>Welcome to the Birds of Shangrila Website! Here, you can find pictures, bird songs and descriptions of the most common birds in Shangrila, Yunnan, China. In addition, you will find several traditional Tibetan and Chinese folktales, songs, and anecdotes about the birds of this region.</p>
+    </div>
+    <div class="span12">
+      <div class="shangrila_map">
+        <%= image_tag("/system/birds/Shangrila_map.jpg", :size => '675x675')%>
       </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>

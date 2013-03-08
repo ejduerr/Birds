@@ -1,97 +1,96 @@
-<html>
-    <body>
-        <div class="container">
-            <%= render 'welcome/heading' %>
-            <div class="row">
-                <div class="span12">
-				    <div class="display_box">
-                        <h3>
-					      <%= link_to @chapter.name, @chapter %>
-                        </h4>
-                        <h3>  
-                          <%= link_to @chapter.chinese_name, @chapter %>
-                        </h4>
-				    </div>	
-                </div>
-            </div> 				
-            <div class="row">
-                <div class="span6">
-					<div class="display_box">
-                        <div class="chapter_bird_thumb_container">
-                            <div class="header_text">
-                                <b>Bird List</b>
-                            </div>    
-                            <ul>
-                                <% @chapter.birds.each do |bird| %><%= render "chapter_bird_thumb", bird: bird %><% end %>
-                            </ul>
-                            <div class="find">
-                                Find 
-                                <input type="text"/>
-        					</div>
-                        </div>
-                    </div>    
-                    <div class="display_box tabbable">
-                        <ul class="nav nav-tabs">
-                            <li class="active">
-                                <a href="#english_story" data-toggle="tab">Story</a>
-                            </li>
-                            <li>
-                                <a href="#chinese_story" data-toggle="tab">Chinese</a>
-                            </li>
-                            <li>
-                                <a href="#tibetan_story" data-toggle="tab">Tibetan</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="english_story">
-                                <p>
-                                    <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.english_story).html_safe %>
-                                </p>
-                            </div>
-                            <div class="tab-pane" id="chinese_story">
-                                <p>
-                                    <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_story).html_safe %>
-                                </p>
-                            </div>
-                            <div class="tab-pane" id="tibetan_story">
-                                <p>
-                                    <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.tibetan_story).html_safe %>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="span6">
-                    <div class="display_box tabbable">
-                        <ul class="nav nav-tabs">
-                            <li class="active">
-                                <a href="#english_description" data-toggle="tab">Description</a>
-                            </li>
-                            <li>
-                                <a href="#chinese_description" data-toggle="tab">Chinese</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="english_description">
-                                <p>
-                                    <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.english_description).html_safe %>
-                                </p>
-                            </div>
-                            <div class="tab-pane" id="chinese_description">
-                                <p>
-                                    <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_description).html_safe %>
-                                </p>
-                            </div>
-                        </div>
-						
-                    </div>
-					<div class= "display_box">
-                        <div class="chapter_pic">
-                            <%= image_tag @chapter.main_image.url(:main) %>
-                        </div>    
-					</div>	
-                </div>
-            </div>
+<div class="row">
+  <div class="span12">
+    <div class="display_box">
+      <h3>
+        <%= link_to @chapter.name, @chapter %>
+        &#47;
+        <%= link_to @chapter.chinese_name, @chapter %>
+      </h3>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span6">
+
+    <!-- bird box -->
+    <div class="display_box">
+      <div class="chapter_bird_thumb_container">
+        <div class="header_text">
+          <b>Bird List</b>
         </div>
-    </body>
-</html>
+
+        <ul>
+          <% @chapter.birds.each do |bird| %><%= render "chapter_bird_thumb", bird: bird %><% end %>
+        </ul>
+
+        <div class="find">
+          Find
+          <input type="text"/>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- stories -->
+    <div class="display_box tabbable">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a href="#english_story" data-toggle="tab">Story</a>
+        </li>
+        <li>
+          <a href="#chinese_story" data-toggle="tab">Chinese</a>
+        </li>
+        <li>
+          <a href="#tibetan_story" data-toggle="tab">Tibetan</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="english_story">
+          <p> <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.english_story).html_safe %> </p>
+        </div>
+
+        <div class="tab-pane" id="chinese_story">
+          <p> <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_story).html_safe %> </p>
+        </div>
+
+        <div class="tab-pane" id="tibetan_story">
+          <p> <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.tibetan_story).html_safe %> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="span6">
+
+    <!-- description boxes -->
+    <div class="display_box tabbable">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a href="#english_description" data-toggle="tab">Description</a>
+        </li>
+
+        <li>
+          <a href="#chinese_description" data-toggle="tab">Chinese</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="english_description">
+          <p> <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.english_description).html_safe %> </p>
+        </div>
+
+        <div class="tab-pane" id="chinese_description">
+          <p> <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( @chapter.chinese_description).html_safe %> </p>
+        </div>
+      </div>
+    </div>
+
+    <div class= "display_box">
+      <div class="chapter_pic">
+        <%= image_tag @chapter.main_image.url(:main) %>
+      </div>
+    </div>
+  </div>
+</div>

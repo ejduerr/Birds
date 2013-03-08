@@ -4,6 +4,9 @@
 @import url(http://fonts.googleapis.com/css?family=Domine);
 @import "bootstrap";
 
+
+/* Chapter bird list ********************/
+
 .chapter_bird_thumb_frame {
   color: #445156;
   background-color: #C9D5DF; /*bird buttons*/
@@ -40,45 +43,15 @@
   width: 290px;
 }
 
+
+
+/* main body ***************************/
+
 .container {
   font-family: 'Domine' !important;
   background: #C9D5DF; 
   border: 1px;
 }
-
-.ch_name_caption a{
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.75);
-  color: #eee;
-  height: 30%;
-  padding: 5px;
-  font-size: 10px;
-  font-weight: bold;
-  line-height: 14px;
-}
-
-.ch_name_caption a:hover {
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-}
-
-.ch_list {
- width: 940px;
-}
-.ch_container {
-  position: relative;
-  float: left;
-  margin: 0px;
-  width: 156px;
-}
-
-.ch_container img {
-  width: 156px;
-}
-
 
 .main_container {
   background: #ededdd;
@@ -97,7 +70,7 @@ a {
 a:hover,
 a:focus {
   color: #858C90;
-}  
+}
 
 .display_box {
   background: #C9D5DF;
@@ -133,7 +106,49 @@ a:focus {
 .title h1 a {
   color: #eee;
   text-shadow: 0px 0px 5px #444;
-}  
+}
+
+
+
+/* main menu ***************************/
+
+.ch_name_caption a {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.75);
+  color: #eee;
+  height: 30%;
+  padding: 5px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+}
+
+.ch_name_caption a:hover {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.ch_list {
+ width: 940px;
+}
+
+.ch_container {
+  position: relative;
+  float: left;
+  margin: 0px;
+  width: 156px;
+}
+
+.ch_container img {
+  width: 156px;
+}
+
+
+
+/* bird show ***************************/
 
 .second_image img {
   margin-left: 10px;
