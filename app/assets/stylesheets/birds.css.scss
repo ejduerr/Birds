@@ -10,6 +10,8 @@
 .chapter_bird_thumb_frame {
   list-style: none;
   margin-bottom: 1px;
+  margin-left: 35px;
+  padding-right: 30px;
   height: 45px;
   border-bottom: 1px dotted rgba(255,255,255,0.1);
 }
@@ -30,15 +32,14 @@
   width: 45px;
   padding: 0px;
   box-shadow: 0px 0px 0px #888;
-  border: 0;
+  border: 0px;
 }
 
 .chapter_bird_thumb_container {
-  background: rgba(0,0,0,0.7);
+  background: #273942;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 1px #000;
-
   text-shadow: 0 0 5px #333;
 }
 
@@ -46,14 +47,17 @@
   height: 275px;
   overflow-y: auto;
   margin-left: 0;
+  width: 375px;
 }
 
 .header_text {
+  font-size: 18px;
   color: #eee;
-  margin-bottom: 5px;
+  margin: 15px 15px 15px 35px;
 }
 
 .find {
+  margin: 20px 15px 10px 35px;
 }
 
 
@@ -67,7 +71,7 @@
 }
 
 .main_container {
-  background: #ededdd;
+  background: #f6f6ee;
   color: #14191B;
 }
 
