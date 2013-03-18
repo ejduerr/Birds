@@ -198,7 +198,7 @@ a:focus {
   margin-bottom: 50px;
 }
 
-.main_bird img, .second_image img, .map img, .shangrila_map img, .chapter_pic img {
+.main_bird img, .second_image img, .map img, .shangrila_map img, .chapter_pic img .bird_stats {
   box-shadow: 0 0 20px rgba(0,0,0, 0.2);
   border-radius: 2px;
 }
@@ -240,36 +240,35 @@ a:focus {
 
 .bird_stats {
   color: #ddd;
-  background: rgba(0,0,0,0.7);
+  background: #273942;
   box-shadow: 0 0 1px #000;
   border-radius: 5px;
   padding: 10px;
-  margin-left: 20px;
+  margin-left: 30px;
   margin-top: 20px;
   text-shadow: 0 0 5px #333;
 }
 
 
-.bird_stats dl
-{
+.bird_stats dl {
   width: 420px;
   margin: 10px 0;
   padding: 0;
 }
 
-.bird_stats dt
-{
+.bird_stats dt {
   clear: left;
   float: left;
   width: 130px;
   margin: 0;
   padding: 5px;
   border-top: 1px dotted rgba(255,255,255,0.1);
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: domine;
 }
 
-.bird_stats dd
-{
+.bird_stats dd {
   float: left;
   width: 260px;
   margin: 0;
@@ -282,7 +281,7 @@ a:focus {
 }
 
 .bird_stats h3 {
-  margin-top: 0
+  margin-top: 0;
 }
 
 .clear {
