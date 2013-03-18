@@ -11,33 +11,35 @@
 
 <div class="row">
   <div class="span6">
-    <div class="bird_stats">
-      <h3> <%= @bird.common_name %> </h3>
-      <dl>
-        <dt>Scientific Name:</dt>
-        <dd><em><%= @bird.scientific_name %></em></dd>
+    <div class="display_box">
+      <div class="bird_stats">
+        <h3> <%= @bird.common_name %> </h3>
+        <dl>
+          <dt>Scientific Name:</dt>
+          <dd><em><%= @bird.scientific_name %></em></dd>
 
-        <dt>Chinese Name:</dt>
-        <dd><%= @bird.chinese_name %></dd>
+          <dt>Chinese Name:</dt>
+          <dd><%= @bird.chinese_name %></dd>
 
-        <dt>Tibetan Name:</dt>
-        <dd><%= @bird.tibetan_name %></dd>
+          <dt>Tibetan Name:</dt>
+          <dd><%= @bird.tibetan_name %></dd>
 
-        <dt>Size:</dt>
-        <dd><%= @bird.size %> cm</dd>
+          <dt>Size:</dt>
+          <dd><%= @bird.size %> cm</dd>
 
-        <dt>Seasons:</dt>
-        <dd>
-          <% if @bird.summer %><%= image_tag "summer.png" %><% end %>
-          <% if @bird.fall   %><%= image_tag "fall.png"   %><% end %>
-          <% if @bird.winter %><%= image_tag "winter.png" %><% end %>
-          <% if @bird.spring %><%= image_tag "spring.png" %><% end %>
-        </dd>
-        <dt>Song:</dt>
-        <dd><audio src="<%= @bird.song.url %>" controls=""></audio></dd>
-      </dl>
-      <div class="clear"></div>
-    </div>
+          <dt>Seasons:</dt>
+          <dd>
+            <% if @bird.summer %><%= image_tag "summer.png" %><% end %>
+            <% if @bird.fall   %><%= image_tag "fall.png"   %><% end %>
+            <% if @bird.winter %><%= image_tag "winter.png" %><% end %>
+            <% if @bird.spring %><%= image_tag "spring.png" %><% end %>
+          </dd>
+          <dt>Song:</dt>
+          <dd><audio src="<%= @bird.song.url %>" controls=""></audio></dd>
+        </dl>
+        <div class="clear"></div>
+      </div>
+    </div>  
 
     <div class="display_box">
       <div class="main_bird">

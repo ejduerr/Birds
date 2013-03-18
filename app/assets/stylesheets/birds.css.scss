@@ -10,10 +10,10 @@
 .chapter_bird_thumb_frame {
   list-style: none;
   margin-bottom: 1px;
-  margin-left: 35px;
+  margin-left: 30px;
   padding-right: 30px;
   height: 45px;
-  border-bottom: 1px dotted rgba(255,255,255,0.1);
+  border-top: 1px dotted rgba(255,255,255,0.1);
 }
 
 .chapter_bird_thumb_frame a {
@@ -41,23 +41,23 @@
   border-radius: 10px;
   box-shadow: 0 0 1px #000;
   text-shadow: 0 0 5px #333;
+  margin: 10px;
 }
 
 .chapter_bird_thumb_container ul {
-  height: 275px;
+  height: 236px;
   overflow-y: auto;
   margin-left: 0;
-  width: 375px;
+  width: 380px;
 }
 
 .header_text {
-  font-size: 18px;
   color: #eee;
-  margin: 15px 15px 15px 35px;
+  margin: 10px 10px 10px 30px;
 }
 
 .find {
-  margin: 20px 15px 10px 35px;
+  margin: 20px 15px 10px 30px;
 }
 
 
@@ -93,7 +93,7 @@ a:focus {
   background: #C9D5DF;
   border-radius: 10px;
   padding: 5px;
-  margin:10px 10px;
+  margin: 20px 10px 0px 10px;
   border: none;
 }
 
@@ -138,8 +138,8 @@ a:focus {
   color: #eee;
   height: 35px;
   padding: 5px;
-  font-size: 11px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 550;
   line-height: 14px;
 }
 
@@ -187,11 +187,14 @@ a:focus {
   padding-left: 30px;
 }
 
-.chapter_pic {
-  text-align: center;
-}
+.chapter_pic img {
+  margin: auto;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 50px;
+} 
 
-.main_bird img, .map img, .shangrila_map img, .chapter_pic img {
+.main_bird img, .map img, .shangrila_map img {
   margin: auto;
   display: block;
   margin-top: 20px;
@@ -206,6 +209,7 @@ a:focus {
 .map img {
   padding: 3px;
   background: rgba(0,0,0, 0.7);
+  margin-top: 30px;
 }
 
 
@@ -244,23 +248,22 @@ a:focus {
   box-shadow: 0 0 1px #000;
   border-radius: 5px;
   padding: 10px;
-  margin-left: 30px;
-  margin-top: 20px;
+  margin: 10px;
   text-shadow: 0 0 5px #333;
 }
 
 
 .bird_stats dl {
   width: 420px;
-  margin: 10px 0;
+  margin: 10px 0px;
   padding: 0;
 }
 
 .bird_stats dt {
   clear: left;
   float: left;
-  width: 130px;
-  margin: 0;
+  width: 115px;
+  margin-left: 0px;
   padding: 5px;
   border-top: 1px dotted rgba(255,255,255,0.1);
   font-weight: normal;
@@ -270,8 +273,8 @@ a:focus {
 
 .bird_stats dd {
   float: left;
-  width: 260px;
-  margin: 0;
+  width: 255px;
+  margin: 0px;
   padding: 5px;
   border-top: 1px dotted rgba(255,255,255,0.1);
 }
