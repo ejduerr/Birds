@@ -48,7 +48,7 @@
   height: 236px;
   overflow-y: auto;
   margin-left: 0;
-  width: 380px;
+  width: 360px;
 }
 
 .header_text {
@@ -119,6 +119,12 @@ a:focus {
 .search_bar {
   padding-right: 20px;
   }
+
+.chinese_title h2 a {
+  color: #eee;
+  text-shadow: 0px 0px 5px #444;
+  padding-left: 30px;
+}
 
 .title h1 a {
   color: #eee;
@@ -208,7 +214,7 @@ a:focus {
 
 .map img {
   padding: 3px;
-  background: rgba(0,0,0, 0.7);
+  background: #273942;
   margin-top: 30px;
 }
 
@@ -226,11 +232,12 @@ a:focus {
 .ch_head a {
   font-size: 30px;
   color: #333;
+  margin-top: 10px;
 }
 
-.seasons img {
-  background: #eee;
-
+.chinese_ch a {
+  margin-left: 20px;  
+  font-size: 25px;
 }
 
 .intro_text {
