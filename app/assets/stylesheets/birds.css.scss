@@ -178,6 +178,8 @@ a:focus {
   margin-left: 10px;
   margin-bottom: 5px;
   float: right;
+  box-shadow: 0 0 20px rgba(0,0,0, 0.2);
+  border-radius: 2px;
 }
 
 .seasons {
@@ -199,6 +201,8 @@ a:focus {
   display: block;
   margin-top: 0px;
   margin-bottom: 50px;
+  box-shadow: 0 0 20px rgba(0,0,0, 0.2);
+  border-radius: 2px;
 } 
 
 .main_bird img, .map img, .shangrila_map img {
@@ -208,7 +212,7 @@ a:focus {
   margin-bottom: 50px;
 }
 
-.main_bird img, .second_image img, .map img, .shangrila_map img, .chapter_pic img .bird_stats {
+.main_bird img, .map img, .shangrila_map img, .bird_stats {
   box-shadow: 0 0 20px rgba(0,0,0, 0.2);
   border-radius: 2px;
 }
