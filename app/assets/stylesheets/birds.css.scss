@@ -136,7 +136,13 @@ a:focus {
   color: #eee;
 }
 
-
+.about a {
+  color: #eee;
+  display:block;
+  width:100px;
+  height: 100%;
+  margin: 0 auto;
+}
 
 /* main menu ***************************/
 

@@ -1,16 +1,16 @@
 Birds::Application.routes.draw do
-  get "thankyou/index"
+  get "aboutus/index"
 
   resources :banners
 
   resources :chapters#, only: [:index, :show]
   resources :birds#, only: [:index, :show]
-  resources :thankyou
+  resources :aboutus
   
   namespace :admin do
 	  resources :chapters
 	  resources :birds
-	  resources :thankyou
+	  resources :aboutus
   end
   
   root :to => 'welcome#index'
