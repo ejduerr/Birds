@@ -14,7 +14,7 @@
               <div class="<%= index == 0 ? "active" : ""%> item">
                 <%=link_to image_tag(banner.main_image.url, id: banner.id), banner.bird %>
                 <div class="carousel-caption">
-                  <h4><%= banner.bird.common_name %></h4>
+                 <%= link_to banner.bird.common_name, banner.bird %>
                 </div>
               </div>
             <% end %>

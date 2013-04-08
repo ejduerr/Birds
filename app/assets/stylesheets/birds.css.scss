@@ -5,6 +5,13 @@
 @import "bootstrap";
 
 
+/* I had to move this up because something above it was over-riding it *******/
+.carousel-caption a {
+  color: #eee;
+  font-size: 20px;
+}
+
+
 /* Chapter bird list ********************/
 
 .chapter_bird_thumb_frame {
@@ -132,12 +139,12 @@ a:focus {
   text-shadow: 0px 0px 5px #444;
 }
 
-.carousel-caption h4 a {
-  color: #eee;
-}
+
 
 .about a {
   color: #eee;
+}
+.about {
   display:block;
   width:100px;
   height: 100%;
