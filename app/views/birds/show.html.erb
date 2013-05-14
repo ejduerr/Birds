@@ -30,10 +30,10 @@
 
           <dt>Seasons:</dt>
           <dd>
+            <% if @bird.spring %><%= image_tag "spring.png" %><% end %>
             <% if @bird.summer %><%= image_tag "summer.png" %><% end %>
             <% if @bird.fall   %><%= image_tag "fall.png"   %><% end %>
             <% if @bird.winter %><%= image_tag "winter.png" %><% end %>
-            <% if @bird.spring %><%= image_tag "spring.png" %><% end %>
           </dd>
           <dt>Song:</dt>
           <dd><audio src="<%= @bird.song.url %>" controls=""></audio></dd>
